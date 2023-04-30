@@ -4,14 +4,10 @@ author: "Lucas Avelar"
 date: "April 29, 2023"
 output: html_document
 ---
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
 ```
 
-```{r, echo=FALSE}
-knitr::opts_chunk$set(error = TRUE)
-```
 The study of historically marginalized groups and their presence in, movement through, and production of space must be conceived in consideration of the multiple ways through which those groups, in historian George Chauncey's words, sought "to claim space for themselves in the midst of a hostile society" on an everyday basis.[^1] Gay men, in particular, built a entire subculture -- that means, one that developed in relation to another culture's parameters, expectations, and norms -- that was extensive, visible, and sophisticated during the first third of the twentieth century. Scholarship on the queer culture and life before the landmark of Stonewall, however, often assumed the premise of internalization, invisibility, and isolation as a given fact. As Chauncey has demonstrated, early-twentieth-century gay men did not passively internalize and accept the dominant cultural perspective on their sexuality and identities, nor were they invisible figures in large urban centers like New York, Minneapolis, and Boston. Rather, the "gay world" was much more tolerated, integrated, and more importantly, visible to outsiders in the pre-war years than it came to be in the second third of the century.
 
 The shift started in the 1930s and it was all but immediate. New waves of anti-gay policing and legislation forced gay people to gradually hide their complex social network from the eyes of outsiders. Arrest numbers of gay men in New York City during the 1930s for engaging with gay life in the public sphere skyrocketed. Scholarly interest and inquiry in queer life became a risky endeavor, and looking for spaces where gay culture thrived in American urban centers was considered potentially dangerous for one's professional and academic reputation. But as Chauncey insists, despite the forceful discretion and increased state censorship and control over homosexual life over the 1940s and 1950s, the gay world "continued to thrive and became even more extensive."[^2]
@@ -21,41 +17,20 @@ Since the cultural turn in historical scholarship in the 1980s, scholars like Ju
 Not surprisingly, and maybe as a result of reinforced state vigilance and control over sexuality and gender norms after the war,both gay men and women found ways to take control over public spaces in large urban areas to exist, express, and experience their sexual and gender identities. Those spaces did not originally identify as gay spaces, and despite the repressive spatial and social organization of the normative city, gay men appropriated those locations and re-signified their value and role in the now-hidden and suppressed gay city. This city, in contrast to the normative city, was constituted of an array of businesses, organizations, institutions, and cruising areas that enabled resisting forms of spatial practice based on an ever-growing sense of identity and sense of place.[^5]
 
 It was in the 1960s that those locations started to be integrated into the gay city and a unified cultural landscape. David K. Johnson has demonstrated how the consolidation of a gay market was crucial to cultivate a sense of identity and community among queer people -- and mostly, gay men -- that would later enable politically engaged gay movements and legal struggles in the 1960s and 1970s. In Minneapolis, Comrad Germain and Lloyd Spinar's Directory Services, Inc. (DSI) was the first of many other business enterprises to follow that centralized gay businesses in integrated publications. DSI was a pioneer endeavor that soon became a nation-wide mail-order publication service. In 1964, Bob Damron started <i>The Address Book</i>, which became "standard resource for gay male tourists for decades." Damron's guides were part of a much larger gay consumer culture, a pivotal business initiative in the formation of what Johnson called a "gay information economy." In putting together a comprehensive list of gay places across the United States, Damron and other entrepreneurs were engaging in a common social strategy among gay men "to take some measure of control" over public spaces like bars, restaurants, bath houses, hotels, religious institutions, book stores, and theaters.[^6]
-```{r}
+
+```{r libraries}
 library(ggplot2) 
 library(tidyverse)
 library(DigitalMethodsData)
 library(ggmap)
 library(tidygeocoder)
-library(visNetwork)
-library(igraph) 
-library(dplyr)
 library(tidyr)
+library(dplyr)
 ```
 
-```{r}
-data(gayguides.complete)
+See below.
 
-gayguides.complete$full.address <- paste(gayguides.complete$streetaddress,  gayguides.complete$city, gayguides.complete$state, sep=", ")
-
-gayguides.1965to1970 <- gayguides.complete %>% 
-  filter(Year >= 1965 & Year <=1970) %>% 
-  filter(unclear_address != "checked") %>% 
-  geocode(address = full.address, method='osm', lat = latitude, long = longitude) 
-
-gayguides.1965to1970 <- gayguides.1965to1970 %>% 
-   filter(gayguides.1965to1970$state != 'VI' & gayguides.1965to1970$state != 'PR' & gayguides.1965to1970$state != 'GU' & gayguides.1965to1970$state != 'HI')
-
-usamap <- map_data("state")
-
-ggplot() + 
-  geom_map(data = usamap, map = usamap, aes(long, lat, map_id=region), fill = "pink", linewidth = 0.5, colour = "black") +
-  geom_point(data = gayguides.1965to1970, mapping = aes(x=longitude, y=latitude), colour = "blue") + labs(title = "Gay locations between 1965 and 1970 in the Contiguous United States") +
-  xlim(-125, -65) +
-  ylim(20, 50)
-```
-
-```{r}
+```{r code}
 #load data from 1965 to 1985
 data(gayguides)
 gayguides1965to1985 <- gayguides
@@ -115,7 +90,8 @@ gaynewyork[gaynewyork == ''] <- NA
 ##prepare new york types for analysis
 #check existing NA types. result: 17 rows
 gaynewyork %>% 
-  filter(is.na(type))
+  filter(is.na(type)) %>% 
+  head()
 
 #account for typos in NY types
 gaynewyork <- gaynewyork %>% mutate(type = fct_collapse(type, "Accommodations" = c("Accommodations", "Accomodations")))
@@ -189,6 +165,29 @@ newyork.types$categories <- ifelse(grepl('Religious', newyork.types$type), "Reli
                                                                                                                                                               ifelse(grepl('Hotline', newyork.types$type), "Organizations",
                                                                                                                                                                      ifelse(grepl('Men', newyork.types$type), "Organizations",
                                                                                                                                                                             ifelse(grepl('Cruis', newyork.types$type), "Cruising Areas", "NA"))))))))))))))))))))))
+```
+
+see map below.
+
+```{r}
+usamap <- map_data("state")
+
+gayguides.complete$fulladdress <- paste(gayguides.complete$streetaddress,  gayguides.complete$city, gayguides.complete$state, sep=", ")
+
+#geocode subset of gay guides data. code chunk is commented out for the sake of faster knitting HTML document.
+#gayguides.1965to1970 <- gayguides.complete %>% 
+  #filter(state != 'VI' & state != 'PR' & state != 'GU' & state != 'HI') %>%
+ # filter(Year >= 1965 & Year <=1970) %>% 
+  #filter(unclear_address != "checked") %>% 
+  #geocode(address = fulladdress, method='osm', lat = latitude, long = longitude)
+
+gayguides.1965to1970 <- read.csv("~/Risky-New-York/gay guides data/gayguides.1965to1970.csv")
+
+ggplot() + 
+  geom_map(data = usamap, map = usamap, aes(long, lat, map_id=region), fill = "pink", linewidth = 0.5, colour = "black") +
+  geom_point(data = gayguides.1965to1970, mapping = aes(x=longitude, y=latitude), colour = "blue") + labs(title = "Gay locations between 1965 and 1970 in the Contiguous United States") +
+  xlim(-125, -65) +
+  ylim(20, 50)
 ```
 
 ----------
