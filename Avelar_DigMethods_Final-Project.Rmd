@@ -1,12 +1,49 @@
 ---
-title: "DigMethods_Final-Project"
+title: "Risky New York: Gendered Spatial Practices Between the Gay City and the Normative City, 1965-1996"
 author: "Lucas Avelar"
-date: "April 25, 2023"
+date: "April 29, 2023"
 output: html_document
 ---
+```{r, echo=FALSE}
+knitr::opts_chunk$set(error = TRUE)
+```
+The study of historically marginalized groups and their presence in, movement through, and production of space must be conceived in consideration of the multiple ways through which those groups, in historian George Chauncey's words, sought "to claim space for themselves in the midst of a hostile society" on an everyday basis.[^1] Gay men, in particular, built a entire subculture -- that means, one that developed in relation to another culture's parameters, expectations, and norms -- that was extensive, visible, and sophisticated during the first third of the twentieth century. Scholarship on the queer culture and life before the landmark of Stonewall, however, often assumed the premise of internalization, invisibility, and isolation as a given fact. As Chauncey has demonstrated, early-twentieth-century gay men did not passively internalize and accept the dominant cultural perspective on their sexuality and identities, nor were they invisible figures in large urban centers like New York, Minneapolis, and Boston. Rather, the "gay world" was much more tolerated, integrated, and more importantly, visible to outsiders in the pre-war years than it came to be in the second third of the century.
 
+The shift started in the 1930s and it was all but immediate. New waves of anti-gay policing and legislation forced gay people to gradually hide their complex social network from the eyes of outsiders. Arrest numbers of gay men in New York City during the 1930s for engaging with gay life in the public sphere skyrocketed. Scholarly interest and inquiry in queer life became a risky endeavor, and looking for spaces where gay culture thrived in American urban centers was considered potentially dangerous for one's professional and academic reputation. But as Chauncey insists, despite the forceful discretion and increased state censorship and control over homosexual life over the 1940s and 1950s, the gay world "continued to thrive and became even more extensive."[^2]
 
+Since the cultural turn in historical scholarship in the 1980s, scholars like Judith Walkowitz, John D'Emilio, Estelle B. Freedman, and Linda Gordon began to challenge the notion of sexuality and its role in shaping gender as a social construct. Feminist scholarship pushed for a new understanding of sex and gender identity as manifestations of complex power dynamics and hierarchic structures of culture in society.[^3] In 1988, Freedman and D'Emilio published their <i>Intimate Matters: A History of Sexuality in America</i>, in which they demonstrated how, over the course of the nineteenth century, the American sexual experience and their very notion of sexuality became less and less associated with reproduction. Ultimately, the emerging notion of sexuality centered around family and intimacy reinforced the "separate sexual spheres" and separate work spaces of men and women: the domestic and the public realms.[^4]
 
+Not surprisingly, and maybe as a result of reinforced state vigilance and control over sexuality and gender norms after the war,both gay men and women found ways to take control over public spaces in large urban areas to exist, express, and experience their sexual and gender identities. Those spaces did not originally identify as gay spaces, and despite the repressive spatial and social organization of the normative city, gay men appropriated those locations and re-signified their value and role in the now-hidden and suppressed gay city. This city, in contrast to the normative city, was constituted of an array of businesses, organizations, institutions, and cruising areas that enabled resisting forms of spatial practice based on an ever-growing sense of identity and sense of place.[^5]
+
+It was in the 1960s that those locations started to be integrated into the gay city and a unified cultural landscape. David K. Johnson has demonstrated how the consolidation of a gay market was crucial to cultivate a sense of identity and community among queer people -- and mostly, gay men -- that would later enable politically engaged gay movements and legal struggles in the 1960s and 1970s. In Minneapolis, Comrad Germain and Lloyd Spinar's Directory Services, Inc. (DSI) was the first of many other business enterprises to follow that centralized gay businesses in integrated publications. DSI was a pioneer endeavor that soon became a nation-wide mail-order publication service. In 1964, Bob Damron started <i>The Address Book</i>, which became "standard resource for gay male tourists for decades." Damron's guides were part of a much larger gay consumer culture, a pivotal business initiative in the formation of what Johnson called a "gay information economy." In putting together a comprehensive list of gay places across the United States, Damron and other entrepreneurs were engaging in a common social strategy among gay men "to take some measure of control" over public spaces like bars, restaurants, bath houses, hotels, religious institutions, book stores, and theaters.[^6]
+
+```{r}
+library(ggplot2) 
+library(tidyverse)
+library(DigitalMethodsData)
+library(ggmap)
+library(tidygeocoder)
+
+data(gayguides.complete)
+
+gayguides.complete$full.address <- paste(gayguides.complete$streetaddress,  gayguides.complete$city, gayguides.complete$state, sep=", ")
+
+gayguides.1965to1970 <- gayguides.complete %>% 
+  filter(Year >= 1965 & Year <=1970) %>% 
+  filter(unclear_address != "checked") %>% 
+  geocode(address = full.address, method='osm', lat = latitude, long = longitude) 
+
+gayguides.1965to1970 <- gayguides.1965to1970 %>% 
+   filter(gayguides.1965to1970$state != 'VI' & gayguides.1965to1970$state != 'PR' & gayguides.1965to1970$state != 'GU' & gayguides.1965to1970$state != 'HI')
+
+usamap <- map_data("state")
+
+ggplot() + 
+  geom_map(data = usamap, map = usamap, aes(long, lat, map_id=region), fill = "pink", linewidth = 0.5, colour = "black") +
+  geom_point(data = gayguides.1965to1970, mapping = aes(x=longitude, y=latitude), colour = "blue") + labs(title = "Gay locations between 1965 and 1970 in the Contiguous United States") +
+  xlim(-125, -65) +
+  ylim(20, 50)
+```
 
 ```{r}
 #load all the libraries in the world
@@ -20,6 +57,8 @@ library(tidyr)
 library(tidytext)
 library(SnowballC)
 library(readtext)
+library(ggmap)
+library(tidygeocoder)
 
 #load data from 1965 to 1985
 data(gayguides)
@@ -27,17 +66,17 @@ gayguides1965to1985 <- gayguides
 rm(gayguides)
 
 #load data from 1986 to 1996
-gayguides1986 <- read.csv("~/Desktop/gay guides data/gayguides1986.csv")
-gayguides1987 <- read.csv("~/Desktop/gay guides data/gayguides1987.csv")
-gayguides1988 <- read.csv("~/Desktop/gay guides data/gayguides1988.csv")
-gayguides1989 <- read.csv("~/Desktop/gay guides data/gayguides1989.csv")
-gayguides1990 <- read.csv("~/Desktop/gay guides data/gayguides1990.csv")
-gayguides1991 <- read.csv("~/Desktop/gay guides data/gayguides1991.csv")
-gayguides1992 <- read.csv("~/Desktop/gay guides data/gayguides1992.csv")
-gayguides1993 <- read.csv("~/Desktop/gay guides data/gayguides1993.csv")
-gayguides1994 <- read.csv("~/Desktop/gay guides data/gayguides1994.csv")
-gayguides1995 <- read.csv("~/Desktop/gay guides data/gayguides1995.csv")
-gayguides1996 <- read.csv("~/Desktop/gay guides data/gayguides1996.csv")
+gayguides1986 <- read.csv("~/Risky-New-York/gay guides data/gayguides1986.csv")
+gayguides1987 <- read.csv("~/Risky-New-York/gay guides data/gayguides1987.csv")
+gayguides1988 <- read.csv("~/Risky-New-York/gay guides data/gayguides1988.csv")
+gayguides1989 <- read.csv("~/Risky-New-York/gay guides data/gayguides1989.csv")
+gayguides1990 <- read.csv("~/Risky-New-York/gay guides data/gayguides1990.csv")
+gayguides1991 <- read.csv("~/Risky-New-York/gay guides data/gayguides1991.csv")
+gayguides1992 <- read.csv("~/Risky-New-York/gay guides data/gayguides1992.csv")
+gayguides1993 <- read.csv("~/Risky-New-York/gay guides data/gayguides1993.csv")
+gayguides1994 <- read.csv("~/Risky-New-York/gay guides data/gayguides1994.csv")
+gayguides1995 <- read.csv("~/Risky-New-York/gay guides data/gayguides1995.csv")
+gayguides1996 <- read.csv("~/Risky-New-York/gay guides data/gayguides1996.csv")
 
 #delete column "X" in 1965-1985 data that does not exist in other data frames
 gayguides1965to1985 <- gayguides1965to1985[,-1]
@@ -154,5 +193,13 @@ newyork.types$categories <- ifelse(grepl('Religious', newyork.types$type), "Reli
                                                                                                                                                               ifelse(grepl('Hotline', newyork.types$type), "Organizations",
                                                                                                                                                                      ifelse(grepl('Men', newyork.types$type), "Organizations",
                                                                                                                                                                             ifelse(grepl('Cruis', newyork.types$type), "Cruising Areas", "NA"))))))))))))))))))))))
-
 ```
+
+----------
+
+[^1]: George Chauncey, <i> Gay New York: Gender, Urban Culture, and the Making of the Gay Male World </i> (New York: Basic Books, 1994), 5.
+[^2]: George Chauncey, <i> Gay New York</i>, 9.
+[^3]: Judith Walkowitz, <i> Prostitution and Victorian Society: Women ,Class, and the State</i> (Cambridge: Cambridge University Press, 1980); Jonh D'Emilio, <i> Sexual Politics, Sexual Communities: The Making of a Homosexual Minority in the United States, 1940-1970</i> (Chicago: University of Chicago Press, 1983); Estelle B. Freedman, "Sexuality in Nineteenth-Century America: Behavior, Ideology and Politics," <i> Reviews in American History</i> 10 (December 1982): 196-215; Linda Gordon, <i> Woman's Body, Woman's Right: A Social History of Birth Control in America</i> (New York: Grossman, 1976).
+[^4]: John D'Emilio and Estelle B. Freedman, <i>Intimate Matters: A History of Sexuality in America</i> (Chicago: Chicago University Press, 1988), 57-59.
+[^5]: John Brinckerhoff Jackson has discussed how our sense of place is intimately connected to our sense of shared time. Here, I use the notions of sense of place and sense of time to suggest that the thriving gay city (or, the gay world of appropriated places) was built on shared rituals and, as per Jackson, a shared "timetable:" Because gay men ritually returned to those same spaces in the city, they established a sense of place in those locations that solidified their belonging to a larger gay community and culture. See: John Brinckerhoff Jackson, <i>A Sense of Place, A Sense of Time</i> (Yale University Press, 1994), 157-160.
+[^6]: David K. Johnson, <i> Buying Gay: Ho Physique Entrepreneurs Sparked a Movement</i> (New York: Columbia University Press, 2019), 193.

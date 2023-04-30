@@ -1,4 +1,4 @@
-This is the official repository for the final project for the 8510 Digital Mehtods II graduate course at Clemson Unviersity. Lucas Avelar's final project is entitled "Risky New York: Gendered Spaces between the Gay City and the Normative City."
+This is the official repository for the final project for the 8510 Digital Mehtods II graduate course at Clemson Unviersity. Lucas Avelar's final project is entitled "Risky New York: Gendered Spacial Practices Between the Gay City and the Normative City, 1965-1996"
 
 "Risky New York" looks primarily at how gay men and women appropriated public spaces in the city of New York between the 1960s and the 1990s resulting in distinct spatial practices that disrupted gendered dynamics of power and the normative American urban and cultural landscape. 
 
