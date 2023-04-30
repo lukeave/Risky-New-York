@@ -132,3 +132,21 @@ newyork.types$categories <- ifelse(grepl('Religious', newyork.types$type), "Reli
                                                                                                                                                                  ifelse(grepl('Hotline', newyork.types$type), "Organizations",
                                                                                                                                                                         ifelse(grepl('Men', newyork.types$type), "Organizations",
                                                                                                                                                                                ifelse(grepl('Cruis', newyork.types$type), "Cruising Areas", "NA"))))))))))))))))))))))
+#add full address column to gayguides.complete
+gayguides.complete$full.address <- 
+  paste(gayguides.complete$streetaddress,  gayguides.complete$city, gayguides.complete$state, sep=", ")
+#geocode subset of gay guides data to 1965 to 1970 (first visualization)
+##output is stored as gayguides.1965to1970.csv
+gayguides.1965to1970 <- gayguides.complete %>% 
+filter(state != 'VI' & state != 'PR' & state != 'GU' & state != 'HI') %>%
+filter(Year >= 1965 & Year <=1970) %>% 
+filter(unclear_address != "checked") %>% 
+geocode(address = full.address, method='osm', lat = latitude, long = longitude)
+
+#subset gaynewyork to visualize the different categorizations of the Ramrod Bar over time
+ramrod.vis <- gaynewyork %>% 
+  filter(grepl('394 West', streetaddress)) %>% 
+  select(description, Year, amenityfeatures) %>% 
+  na.exclude()
+
+ramrod.vis <- ramrod.vis[, c(4, 2, 3, 1)]

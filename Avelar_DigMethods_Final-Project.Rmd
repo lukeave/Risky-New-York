@@ -6,19 +6,7 @@ output: html_document
 ---
 ```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
-```
 
-The study of historically marginalized groups and their presence in, movement through, and production of space must be conceived in consideration of the multiple ways through which those groups, in historian George Chauncey's words, sought "to claim space for themselves in the midst of a hostile society" on an everyday basis.[^1] Gay men, in particular, built a entire subculture -- that means, one that developed in relation to another culture's parameters, expectations, and norms -- that was extensive, visible, and sophisticated during the first third of the twentieth century. Scholarship on the queer culture and life before the landmark of Stonewall, however, often assumed the premise of internalization, invisibility, and isolation as a given fact. As Chauncey has demonstrated, early-twentieth-century gay men did not passively internalize and accept the dominant cultural perspective on their sexuality and identities, nor were they invisible figures in large urban centers like New York, Minneapolis, and Boston. Rather, the "gay world" was much more tolerated, integrated, and more importantly, visible to outsiders in the pre-war years than it came to be in the second third of the century.
-
-The shift started in the 1930s and it was all but immediate. New waves of anti-gay policing and legislation forced gay people to gradually hide their complex social network from the eyes of outsiders. Arrest numbers of gay men in New York City during the 1930s for engaging with gay life in the public sphere skyrocketed. Scholarly interest and inquiry in queer life became a risky endeavor, and looking for spaces where gay culture thrived in American urban centers was considered potentially dangerous for one's professional and academic reputation. But as Chauncey insists, despite the forceful discretion and increased state censorship and control over homosexual life over the 1940s and 1950s, the gay world "continued to thrive and became even more extensive."[^2]
-
-Since the cultural turn in historical scholarship in the 1980s, scholars like Judith Walkowitz, John D'Emilio, Estelle B. Freedman, and Linda Gordon began to challenge the notion of sexuality and its role in shaping gender as a social construct. Feminist scholarship pushed for a new understanding of sex and gender identity as manifestations of complex power dynamics and hierarchic structures of culture in society.[^3] In 1988, Freedman and D'Emilio published their <i>Intimate Matters: A History of Sexuality in America</i>, in which they demonstrated how, over the course of the nineteenth century, the American sexual experience and their very notion of sexuality became less and less associated with reproduction. Ultimately, the emerging notion of sexuality centered around family and intimacy reinforced the "separate sexual spheres" and separate work spaces of men and women: the domestic and the public realms.[^4]
-
-Not surprisingly, and maybe as a result of reinforced state vigilance and control over sexuality and gender norms after the war,both gay men and women found ways to take control over public spaces in large urban areas to exist, express, and experience their sexual and gender identities. Those spaces did not originally identify as gay spaces, and despite the repressive spatial and social organization of the normative city, gay men appropriated those locations and re-signified their value and role in the now-hidden and suppressed gay city. This city, in contrast to the normative city, was constituted of an array of businesses, organizations, institutions, and cruising areas that enabled resisting forms of spatial practice based on an ever-growing sense of identity and sense of place.[^5]
-
-It was in the 1960s that those locations started to be integrated into the gay city and a unified cultural landscape. David K. Johnson has demonstrated how the consolidation of a gay market was crucial to cultivate a sense of identity and community among queer people -- and mostly, gay men -- that would later enable politically engaged gay movements and legal struggles in the 1960s and 1970s. In Minneapolis, Comrad Germain and Lloyd Spinar's Directory Services, Inc. (DSI) was the first of many other business enterprises to follow that centralized gay businesses in integrated publications. DSI was a pioneer endeavor that soon became a nation-wide mail-order publication service. In 1964, Bob Damron started <i>The Address Book</i>, which became "standard resource for gay male tourists for decades." Damron's guides were part of a much larger gay consumer culture, a pivotal business initiative in the formation of what Johnson called a "gay information economy." In putting together a comprehensive list of gay places across the United States, Damron and other entrepreneurs were engaging in a common social strategy among gay men "to take some measure of control" over public spaces like bars, restaurants, bath houses, hotels, religious institutions, book stores, and theaters.[^6]
-
-```{r libraries}
 library(ggplot2) 
 library(tidyverse)
 library(DigitalMethodsData)
@@ -26,160 +14,29 @@ library(ggmap)
 library(tidygeocoder)
 library(tidyr)
 library(dplyr)
+library(igraph)
+library(networkD3)
+library(ggraph)
 ```
 
-See below.
+The study of historically marginalized groups and their presence in, movement through, and production of space must be conceived in consideration of the multiple ways through which those groups, in historian George Chauncey's words, sought "to claim space for themselves in the midst of a hostile society" on an everyday basis.[^1] Gay men, in particular, built an entire subculture -- that means, one that developed in relation to another culture's parameters, expectations, and norms -- that was extensive, visible, and sophisticated during the first third of the twentieth century. Scholarship on the queer culture and life before the landmark of Stonewall, however, often assumed the premise of internalization, invisibility, and isolation as a given fact. As Chauncey has demonstrated, the "gay world" was much more tolerated, integrated, and more importantly, visible to outsiders in the pre-war years than it came to be in the second third of the century.
 
-```{r code}
-#load data from 1965 to 1985
-data(gayguides)
-gayguides1965to1985 <- gayguides
-rm(gayguides)
+Early-twentieth-century gay men did not passively internalize and accept the dominant cultural perspective on their sexuality and identities, nor were they invisible figures in thriving urban landscapes like New York, Minneapolis, and Boston. The shift started in the 1930s and it was all but immediate. New waves of anti-gay policing and legislation forced gay people to gradually hide their complex social network from the eyes of outsiders. Arrest numbers of gay men in New York City during the 1930s for engaging with gay life in the public sphere skyrocketed. Gradually yet violently, the gay city was suppressed back into the shadows of the normative city. But as Chauncey insists, despite the forceful discretion and increased state censorship and control over homosexual life over the 1940s and 1950s, the gay world "continued to thrive and became even more extensive."[^2] 
 
-#load data from 1986 to 1996
-gayguides1986 <- read.csv("~/Risky-New-York/gay guides data/gayguides1986.csv")
-gayguides1987 <- read.csv("~/Risky-New-York/gay guides data/gayguides1987.csv")
-gayguides1988 <- read.csv("~/Risky-New-York/gay guides data/gayguides1988.csv")
-gayguides1989 <- read.csv("~/Risky-New-York/gay guides data/gayguides1989.csv")
-gayguides1990 <- read.csv("~/Risky-New-York/gay guides data/gayguides1990.csv")
-gayguides1991 <- read.csv("~/Risky-New-York/gay guides data/gayguides1991.csv")
-gayguides1992 <- read.csv("~/Risky-New-York/gay guides data/gayguides1992.csv")
-gayguides1993 <- read.csv("~/Risky-New-York/gay guides data/gayguides1993.csv")
-gayguides1994 <- read.csv("~/Risky-New-York/gay guides data/gayguides1994.csv")
-gayguides1995 <- read.csv("~/Risky-New-York/gay guides data/gayguides1995.csv")
-gayguides1996 <- read.csv("~/Risky-New-York/gay guides data/gayguides1996.csv")
+In this short article, by  using methodologies of data exploratory analysis to examine the available data from the <i>Mapping the Gay Guides</i> project, I contend that the suppressed gay landscape in New York City thrived, among other things, as a result of non-conforming spatial practices and appropriation of public spaces of the normative city by gay men. In the public sphere, danger and risk factored on how particular locales became associated with gay culture and resistance to <i>status quo</i>. The Gay New York City in the second half of the twentieth century was a stubborn response to risky New York - a hetero normative topography and sexual regime established during and after the war.
 
-#delete column "X" in 1965-1985 data that does not exist in other data frames
-gayguides1965to1985 <- gayguides1965to1985[,-1]
+<h3> A Shared Sense of Place </h3>
 
-#change name of column 13 in 1965-1985 data to match column name in other data frames
-colnames(gayguides1965to1985)[13] <- "unclear_address"
+Scholarly interest and inquiry in queer life became a risky endeavor, and looking for spaces where gay culture thrived in American urban centers was considered potentially dangerous for one's professional and academic reputation.
 
-#delete all other columns in 1965-1985 data that are irrelevant for analysis to ensure that data frames have the same variables throughout
-gayguides1965to1985 <- gayguides1965to1985[,-11]
-gayguides1965to1985 <- gayguides1965to1985[,-10]
-gayguides1965to1985 <- gayguides1965to1985[,-10]
+Since the cultural turn in historical scholarship in the 1980s, scholars like Judith Walkowitz, John D'Emilio, Estelle B. Freedman, and Linda Gordon began to challenge the notion of sexuality and its role in shaping gender as a social construct. Feminist scholarship pushed for a new understanding of sex and gender identity as manifestations of complex power dynamics and hierarchic structures of culture in society.[^3] In 1988, Freedman and D'Emilio published their <i>Intimate Matters: A History of Sexuality in America</i>, in which they demonstrated how, over the course of the nineteenth century, the American sexual experience and their very notion of sexuality became less and less associated with reproduction. Ultimately, the emerging notion of sexuality centered around family and intimacy reinforced the "separate sexual spheres" and separate work spaces of men and women: the domestic and the public realms.[^4]
 
-#combine all data frames from 1986 to 1996 into a single data frame
-gayguides1986to1996 <- rbind(gayguides1986, gayguides1987, gayguides1988, gayguides1989, gayguides1988, gayguides1989, gayguides1990, gayguides1991, gayguides1992, gayguides1993, gayguides1994, gayguides1995, gayguides1996)
+Not surprisingly, and maybe as a result of reinforced state vigilance and control over sexuality and gender norms after the war,both gay men and women found ways to take control over public spaces in large urban areas to exist, express, and experience their sexual and gender identities. Those spaces did not originally identify as gay spaces, and despite the repressive spatial and social organization of the normative city, gay men appropriated those locations and re-signified their value and role in the now-hidden and suppressed gay city. This city, in contrast to the normative city, was constituted of an array of businesses, organizations, institutions, and cruising areas that enabled resisting forms of spatial practice based on an ever-growing sense of identity and sense of place.[^5]
 
-#delete all columns in 1986-1996 data that are irrelevant for analysis to ensure that data frames have the same variables throughout
-gayguides1986to1996 <- gayguides1986to1996[,-13]
-gayguides1986to1996 <- gayguides1986to1996[,-11]
-gayguides1986to1996 <- gayguides1986to1996[,-10]
-
-#again, change name of column 1 in 1986-1996 data to ensure consistency across data frames
-colnames(gayguides1986to1996)[1] <- "ID"
-
-#combine 1965-1985 with 1986-1996
-gayguides.complete <- rbind(gayguides1986to1996, gayguides1965to1985) %>% 
-  na.exclude()
-
-#count types
-type.count <- gayguides.complete %>% 
-  group_by(type) %>% 
-  summarize(count = n())
-
-#subset data to NY locations only
-gaynewyork <- gayguides.complete %>% 
-  filter(state == "NY")
-
-#replace empty strings with NAs
-gaynewyork[gaynewyork == ''] <- NA
-
-##prepare new york types for analysis
-#check existing NA types. result: 17 rows
-gaynewyork %>% 
-  filter(is.na(type)) %>% 
-  head()
-
-#account for typos in NY types
-gaynewyork <- gaynewyork %>% mutate(type = fct_collapse(type, "Accommodations" = c("Accommodations", "Accomodations")))
-
-gaynewyork <- gaynewyork %>% mutate(type = fct_collapse(type, "Organizations" = c("Organization", "Organizations")))
-
-gaynewyork <- gaynewyork %>% mutate(type = fct_collapse(type, "Religious Institutions" = c("Religious Institution", "Religious Organizations", "Religious Organization")))
-
-#count unique NY types
-newyork.types <- gaynewyork %>% 
-  group_by(type) %>% 
-  summarize(count = n())
-
-#exclude NA types from count
-newyork.types <- newyork.types %>% na.exclude()
-
-#create a new column to denote cruisy for each location in NY
-gaynewyork <- gaynewyork %>%
-  mutate(cruisy = ifelse(grepl('cruis', description), "TRUE",
-                         ifelse(grepl('Cruis', description), "TRUE", 
-                            ifelse(grepl('Cruis', amenityfeatures), "TRUE",
-                                ifelse(grepl('Cruis', type), "TRUE", "FALSE")))))
-
-#subset the NY data to those locations that were assigned a risk factor
-risky.newyork <- gaynewyork %>% 
-  filter(grepl('AYOR', amenityfeatures) | grepl('HOT', amenityfeatures) | grepl('locally', description) | grepl('HOT!', description) | grepl('hot)', description))
-
-##Hierarchy of Analytic Categories
-## 1. Religious Institutions
-## 2. Accommodations
-### 2.1. Hotels
-## 3. Bars
-## 4. Restaurants
-### 4.1. Cafes
-## 5. Gyms
-### 5.1. Health Clubs
-## 6. Bath Houses
-## 7. Businesses
-### 7.1. Travel; Tour
-### 7.2. Shops; Erotica; Bookstores
-### 7.3. Theaters
-### 7.4. Services (including Info Lines)
-## 8. Organizations
-#### 8.1. Community Centers
-#### 8.2. Publications
-### 8.3. Hotlines
-### 8.4. Men's Club
-## 9. Cruising Areas
-### 9.1. Cruisy + Cruising
-
-#based on the new hierarchy of types, collapse types into analytic categories
-newyork.types$categories <- ifelse(grepl('Religious', newyork.types$type), "Religious Institutions",
-                                   ifelse(grepl('Hotel', newyork.types$type), "Accommodations",
-                                          ifelse(grepl('Accommodation', newyork.types$type), "Accommodations",
-                                                 ifelse(grepl('Bar', newyork.types$type), "Bars",
-                                                        ifelse(grepl('Restaurant', newyork.types$type), "Restaurants",
-                                                               ifelse(grepl('Cafe', newyork.types$type), "Restaurants",
-                                                                      ifelse(grepl('Gym', newyork.types$type), "Gyms",
-                                                                          ifelse(grepl('Health', newyork.types$type), "Gyms",
-                                                                                 ifelse(grepl('Bath', newyork.types$type), "Bath Houses",
-                                                                                        ifelse(grepl('Business', newyork.types$type), "Businesses",
-                                                                                               ifelse(grepl('Travel', newyork.types$type), "Businesses",
-                                                                                                      ifelse(grepl('Tour', newyork.types$type), "Businesses",
-                                                                                                             ifelse(grepl('Shop', newyork.types$type), "Businesses",
-                                                                                                                    ifelse(grepl('Erotica', newyork.types$type), "Businesses",
-                                                                                                                           ifelse(grepl('Book', newyork.types$type), "Businesses",
-                                                                                                                                  ifelse(grepl('Theat', newyork.types$type), "Businesses",
-                                                                                                                                         ifelse(grepl('Service', newyork.types$type), "Businesses",
-                                                                                                                                                ifelse(grepl('Community', newyork.types$type), "Organizations",
-                                                                                                                                                       ifelse(grepl('Publication', newyork.types$type), "Organizations",
-                                                                                                                                                              ifelse(grepl('Hotline', newyork.types$type), "Organizations",
-                                                                                                                                                                     ifelse(grepl('Men', newyork.types$type), "Organizations",
-                                                                                                                                                                            ifelse(grepl('Cruis', newyork.types$type), "Cruising Areas", "NA"))))))))))))))))))))))
-```
-
-see map below.
+It was in the 1960s that those locations started to be integrated into the gay city and a unified cultural landscape. David K. Johnson has demonstrated how the consolidation of a gay market was crucial to cultivate a sense of identity and community among queer people -- and mostly, gay men -- that would later enable politically engaged gay movements and legal struggles in the 1960s and 1970s. In Minneapolis, Comrad Germain and Lloyd Spinar's Directory Services, Inc. (DSI) was the first of many other business enterprises to follow that centralized gay businesses in integrated publications. DSI was a pioneer endeavor that soon became a nation-wide mail-order publication service. In 1964, Bob Damron started <i>The Address Book</i>, which became "standard resource for gay male tourists for decades." Damron's guides were part of a much larger gay consumer culture, a pivotal business initiative in the formation of what Johnson called a "gay information economy." In putting together a comprehensive list of gay places across the United States, Damron and other entrepreneurs were engaging in a common social strategy among gay men "to take some measure of control" over public spaces like bars, restaurants, bath houses, hotels, religious institutions, book stores, and theaters.[^6]
 
 ```{r}
 usamap <- map_data("state")
-
-gayguides.complete$fulladdress <- paste(gayguides.complete$streetaddress,  gayguides.complete$city, gayguides.complete$state, sep=", ")
-
-#geocode subset of gay guides data. code chunk is commented out for the sake of faster knitting HTML document.
-#gayguides.1965to1970 <- gayguides.complete %>% 
-  #filter(state != 'VI' & state != 'PR' & state != 'GU' & state != 'HI') %>%
- # filter(Year >= 1965 & Year <=1970) %>% 
-  #filter(unclear_address != "checked") %>% 
-  #geocode(address = fulladdress, method='osm', lat = latitude, long = longitude)
 
 gayguides.1965to1970 <- read.csv("~/Risky-New-York/gay guides data/gayguides.1965to1970.csv")
 
@@ -189,9 +46,32 @@ ggplot() +
   xlim(-125, -65) +
   ylim(20, 50)
 ```
+Damron's Addresses Books incorporated multiple signals for categorizing gay locations according to social function, sociability, safety, and popularity. The "Explanation of Listings" page -- which became the "Key to Listings Code" page in 1990 -- provided readers with arbitrary categories that indicated the types of locations and which groups frequented each place. Some categories like "HOT" and "AYOR" (At Your Own Risk) also denoted danger, policing, frequent arrests, or risk of violent encounters with non-queer groups. Over the years, the risk factor varied according to larger social and political trends related to gay life and culture. 
 
-----------
+On November 19, 1980, former transit police officer Ronald Crumpley opened fire with an automatic weapon in front of the Ramrod Bar on West Street in Manhattan. In midst of the AIDS crisis and the political discourse of demonization of gay men, the shooting was a symbolic attack to the community and its uses of public spaces within the normative city landscape. Damron's Guides had incorporated the Ramrod Bar since 1974 up until 1983, a couple years after the attack. In 1982, Damron removed the code "FFA" from the description of Ramrod Bar and directly addressed the attack by adding "Tragic shooting" in the description of the bar. Scholars have previously contended that the FFA code, described as "Final Faith of America, or ask your friendly SM serviceman" in the Address Books could be implicitly referring to the group ‘Fist Fuckers of America,’ a group associated with the BDSM subculture of the time. The group allegedly met at the gay club Mineshaft, also located in New York.
 
+```{r}
+ramrod.vis <- read.csv("~/Risky-New-York/gay guides data/ramrod.bar.categories.csv") 
+ramrod.vis <- ramrod.vis %>% 
+  select(Year, amenityfeatures, description) %>% 
+  group_by(Year)
+
+ramrod.vis %>%
+  arrange(Year)
+```
+
+
+```{r}
+risky.newyork <- read.csv("~/Risky-New-York/gay guides data/risky.newyork.csv")
+
+risky.newyork %>% group_by(Year) %>%
+  summarise(count = n()) %>% 
+  ggplot(aes(x = Year, y = count)) +
+  geom_line() + labs(title = 'Risk factor in gay New York City over the years', x = 'Year', y = 'Risky Locations')
+```
+
+
+---
 [^1]: George Chauncey, <i> Gay New York: Gender, Urban Culture, and the Making of the Gay Male World </i> (New York: Basic Books, 1994), 5.
 [^2]: George Chauncey, <i> Gay New York</i>, 9.
 [^3]: Judith Walkowitz, <i> Prostitution and Victorian Society: Women ,Class, and the State</i> (Cambridge: Cambridge University Press, 1980); Jonh D'Emilio, <i> Sexual Politics, Sexual Communities: The Making of a Homosexual Minority in the United States, 1940-1970</i> (Chicago: University of Chicago Press, 1983); Estelle B. Freedman, "Sexuality in Nineteenth-Century America: Behavior, Ideology and Politics," <i> Reviews in American History</i> 10 (December 1982): 196-215; Linda Gordon, <i> Woman's Body, Woman's Right: A Social History of Birth Control in America</i> (New York: Grossman, 1976).
