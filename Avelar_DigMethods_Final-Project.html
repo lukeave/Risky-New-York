@@ -455,6 +455,36 @@ library(ggmap)</code></pre>
 ## The following object is masked from &#39;package:ggmap&#39;:
 ## 
 ##     geocode</code></pre>
+<pre class="r"><code>library(visNetwork)
+library(igraph) </code></pre>
+<pre><code>## 
+## Attaching package: &#39;igraph&#39;
+## 
+## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     as_data_frame, groups, union
+## 
+## The following objects are masked from &#39;package:purrr&#39;:
+## 
+##     compose, simplify
+## 
+## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     crossing
+## 
+## The following object is masked from &#39;package:tibble&#39;:
+## 
+##     as_data_frame
+## 
+## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     decompose, spectrum
+## 
+## The following object is masked from &#39;package:base&#39;:
+## 
+##     union</code></pre>
+<pre class="r"><code>library(dplyr)
+library(tidyr)</code></pre>
 <pre class="r"><code>data(gayguides.complete)</code></pre>
 <pre><code>## Warning in data(gayguides.complete): data set &#39;gayguides.complete&#39; not found</code></pre>
 <pre class="r"><code>gayguides.complete$full.address &lt;- paste(gayguides.complete$streetaddress,  gayguides.complete$city, gayguides.complete$state, sep=&quot;, &quot;)</code></pre>
@@ -477,41 +507,7 @@ ggplot() +
 <pre><code>## Warning in geom_map(data = usamap, map = usamap, aes(long, lat, map_id =
 ## region), : Ignoring unknown aesthetics: x and y</code></pre>
 <pre><code>## Error in fortify(data): object &#39;gayguides.1965to1970&#39; not found</code></pre>
-<pre class="r"><code>#load all the libraries in the world
-library(tidyverse)
-library(ggplot2) 
-library(DigitalMethodsData)
-library(visNetwork)
-library(igraph) </code></pre>
-<pre><code>## 
-## Attaching package: &#39;igraph&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
-## 
-##     as_data_frame, groups, union</code></pre>
-<pre><code>## The following objects are masked from &#39;package:purrr&#39;:
-## 
-##     compose, simplify</code></pre>
-<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
-## 
-##     crossing</code></pre>
-<pre><code>## The following object is masked from &#39;package:tibble&#39;:
-## 
-##     as_data_frame</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     decompose, spectrum</code></pre>
-<pre><code>## The following object is masked from &#39;package:base&#39;:
-## 
-##     union</code></pre>
-<pre class="r"><code>library(dplyr)
-library(tidyr)
-library(tidytext)
-library(SnowballC)
-library(readtext)
-library(ggmap)
-library(tidygeocoder)
-
-#load data from 1965 to 1985
+<pre class="r"><code>#load data from 1965 to 1985
 data(gayguides)
 gayguides1965to1985 &lt;- gayguides
 rm(gayguides)

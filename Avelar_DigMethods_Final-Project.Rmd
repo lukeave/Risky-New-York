@@ -4,6 +4,11 @@ author: "Lucas Avelar"
 date: "April 29, 2023"
 output: html_document
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
 ```{r, echo=FALSE}
 knitr::opts_chunk$set(error = TRUE)
 ```
@@ -16,14 +21,19 @@ Since the cultural turn in historical scholarship in the 1980s, scholars like Ju
 Not surprisingly, and maybe as a result of reinforced state vigilance and control over sexuality and gender norms after the war,both gay men and women found ways to take control over public spaces in large urban areas to exist, express, and experience their sexual and gender identities. Those spaces did not originally identify as gay spaces, and despite the repressive spatial and social organization of the normative city, gay men appropriated those locations and re-signified their value and role in the now-hidden and suppressed gay city. This city, in contrast to the normative city, was constituted of an array of businesses, organizations, institutions, and cruising areas that enabled resisting forms of spatial practice based on an ever-growing sense of identity and sense of place.[^5]
 
 It was in the 1960s that those locations started to be integrated into the gay city and a unified cultural landscape. David K. Johnson has demonstrated how the consolidation of a gay market was crucial to cultivate a sense of identity and community among queer people -- and mostly, gay men -- that would later enable politically engaged gay movements and legal struggles in the 1960s and 1970s. In Minneapolis, Comrad Germain and Lloyd Spinar's Directory Services, Inc. (DSI) was the first of many other business enterprises to follow that centralized gay businesses in integrated publications. DSI was a pioneer endeavor that soon became a nation-wide mail-order publication service. In 1964, Bob Damron started <i>The Address Book</i>, which became "standard resource for gay male tourists for decades." Damron's guides were part of a much larger gay consumer culture, a pivotal business initiative in the formation of what Johnson called a "gay information economy." In putting together a comprehensive list of gay places across the United States, Damron and other entrepreneurs were engaging in a common social strategy among gay men "to take some measure of control" over public spaces like bars, restaurants, bath houses, hotels, religious institutions, book stores, and theaters.[^6]
-
 ```{r}
 library(ggplot2) 
 library(tidyverse)
 library(DigitalMethodsData)
 library(ggmap)
 library(tidygeocoder)
+library(visNetwork)
+library(igraph) 
+library(dplyr)
+library(tidyr)
+```
 
+```{r}
 data(gayguides.complete)
 
 gayguides.complete$full.address <- paste(gayguides.complete$streetaddress,  gayguides.complete$city, gayguides.complete$state, sep=", ")
@@ -46,20 +56,6 @@ ggplot() +
 ```
 
 ```{r}
-#load all the libraries in the world
-library(tidyverse)
-library(ggplot2) 
-library(DigitalMethodsData)
-library(visNetwork)
-library(igraph) 
-library(dplyr)
-library(tidyr)
-library(tidytext)
-library(SnowballC)
-library(readtext)
-library(ggmap)
-library(tidygeocoder)
-
 #load data from 1965 to 1985
 data(gayguides)
 gayguides1965to1985 <- gayguides
