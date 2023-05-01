@@ -1,5 +1,5 @@
 This is the official repository for the final project for the 8510 Digital Mehtods II graduate course at Clemson Unviersity. Lucas Avelar's final project is entitled "Risky New York: Gendered Spacial Practices Between the Gay City and the Normative City, 1965-1996"
 
-"Risky New York" looks primarily at how gay men and women appropriated public spaces in the city of New York between the 1960s and the 1990s resulting in distinct spatial practices that disrupted gendered dynamics of power and the normative American urban and cultural landscape. 
+"Risky New York" looks primarily at how gay men appropriated public spaces in the city of New York between the 1960s and the 1990s resulting in distinct spatial practices that disrupted gendered dynamics of power and the normative American urban and cultural landscape. 
 
 "Risky New York" uses the avialable data from the Mapping the Gay Guides project between 1965 and 1996. It also draws from schoalrship on gender and space, primarily "Gay New York" by George Chauncey, "Women and The City: Gender, Space, and Power in Boston, 1870, 1940" by Sarah Deutsch, and "Buy Gay: How Physique Entrepreneurs Sparked a Movement" by David K. Johnson. 
