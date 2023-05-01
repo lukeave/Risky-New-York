@@ -17,13 +17,16 @@ library(dplyr)
 library(igraph)
 library(networkD3)
 library(ggraph)
+library(leaflet)
+library(leaftime)
+library(geojsonR)
 ```
 
 The study of historically marginalized groups and their presence in, movement through, and production of space must be conceived in consideration of the multiple ways through which those groups, in historian George Chauncey's words, sought "to claim space for themselves in the midst of a hostile society" on an everyday basis.[^1] Gay men, in particular, built an entire subculture -- that means, one that developed in relation to another culture's parameters, expectations, and norms -- that was extensive, visible, and sophisticated during the first third of the twentieth century. Scholarship on the queer culture and life before the landmark of Stonewall, however, often assumed the premise of internalization, invisibility, and isolation as a given fact. As Chauncey has demonstrated, the "gay world" was much more tolerated, integrated, and more importantly, visible to outsiders in the pre-war years than it came to be in the second third of the century.
 
 Early-twentieth-century gay men did not passively internalize and accept the dominant cultural perspective on their sexuality and identities, nor were they invisible figures in thriving urban landscapes like New York, Minneapolis, and Boston. The shift started in the 1930s and it was all but immediate. New waves of anti-gay policing and legislation forced gay people to gradually hide their complex social network from the eyes of outsiders. Arrest numbers of gay men in New York City during the 1930s for engaging with gay life in the public sphere skyrocketed. Gradually yet violently, the gay city was suppressed back into the shadows of the normative city. But as Chauncey insists, despite the forceful discretion and increased state censorship and control over homosexual life over the 1940s and 1950s, the gay world "continued to thrive and became even more extensive."[^2] 
 
-In this short article, by  using methodologies of data exploratory analysis to examine the available data from the <i>Mapping the Gay Guides</i> project, I contend that the suppressed gay landscape in New York City thrived, among other things, as a result of non-conforming spatial practices and appropriation of public spaces of the normative city by gay men. In the public sphere, danger and risk factored on how particular locales became associated with gay culture and resistance to <i>status quo</i>. The Gay New York City in the second half of the twentieth century was a stubborn response to risky New York - a hetero normative topography and sexual regime established during and after the war.
+In this short article, by  using methodologies of data exploratory analysis to examine the available data from the <i>Mapping the Gay Guides</i> project, I contend that the suppressed gay landscape in New York City thrived, among other things, as a result of non-conforming spatial practices and appropriation of public spaces of the normative city by gay men. In the public sphere, danger and risk factored on how particular locales became associated with gay culture and resistance to <i>status quo</i>. The Gay New York City in the second half of the twentieth century was a stubborn response to Risky New York - a heteronormative cultural topography and sexual regime established during and after the Second World War.
 
 <h3> A Shared Sense of Place </h3>
 
@@ -46,9 +49,17 @@ ggplot() +
   xlim(-125, -65) +
   ylim(20, 50)
 ```
-Damron's Addresses Books incorporated multiple signals for categorizing gay locations according to social function, sociability, safety, and popularity. The "Explanation of Listings" page -- which became the "Key to Listings Code" page in 1990 -- provided readers with arbitrary categories that indicated the types of locations and which groups frequented each place. Some categories like "HOT" and "AYOR" (At Your Own Risk) also denoted danger, policing, frequent arrests, or risk of violent encounters with non-queer groups. Over the years, the risk factor varied according to larger social and political trends related to gay life and culture. 
+Damron's Address Books incorporated multiple signals for categorizing gay locations according to social function, sociability, safety, and popularity. The "Explanation of Listings" page -- which became the "Key to Listing Codes" page in 1990 -- provided readers with descriptive categories that indicated the types of locations and which groups frequented each place. Some categories like "HOT" and "AYOR" (At Your Own Risk) also denoted danger, policing, frequent arrests, or risk of violent encounters with non-queer groups. As the graph below demonstrates, over the years, the risk factor varied according to larger social and political trends related to gay life and culture. The overall increase in danger and risk categories in the guides through the second half of the century is particularly insightful when considering Chauncey's interpretation of the suppression of the gay world and growing state vigilance and control over homosexual existence. Further, in the late 1980s, the AIDS crisis aligned with an apocalyptic view of the future and military metaphors around AIDS across the United States reinforced gay men's necessity of living underground and segregated from the normative city.[^7]
 
-On November 19, 1980, former transit police officer Ronald Crumpley opened fire with an automatic weapon in front of the Ramrod Bar on West Street in Manhattan. In midst of the AIDS crisis and the political discourse of demonization of gay men, the shooting was a symbolic attack to the community and its uses of public spaces within the normative city landscape. Damron's Guides had incorporated the Ramrod Bar since 1974 up until 1983, a couple years after the attack. In 1982, Damron removed the code "FFA" from the description of Ramrod Bar and directly addressed the attack by adding "Tragic shooting" in the description of the bar. Scholars have previously contended that the FFA code, described as "Final Faith of America, or ask your friendly SM serviceman" in the Address Books could be implicitly referring to the group ‘Fist Fuckers of America,’ a group associated with the BDSM subculture of the time. The group allegedly met at the gay club Mineshaft, also located in New York.
+```{r}
+risky.newyork <- read.csv("~/Risky-New-York/gay guides data/risky.newyork.csv")
+
+risky.newyork %>% group_by(Year) %>%
+  summarise(count = n()) %>% 
+  ggplot(aes(x = Year, y = count)) +
+  geom_line() + labs(title = 'Risk factor in gay New York City over the years', x = 'Year', y = 'Risky Locations')
+```
+On November 19, 1980, former transit police officer Ronald Crumpley opened fire with an automatic weapon in front of the Ramrod Bar on West Street in Manhattan. In midst of the political and epidemic discourse of demonization of gay men, the shooting was both a physical and symbolic attack against the community and its uses of public spaces within the normative city and the urban landscape. Damron's Guides had incorporated the Ramrod Bar since 1974 up until 1983, a couple years after the attack. In 1982, Damron removed the code "FFA" from the description of Ramrod Bar and directly addressed the attack by adding "Tragic shooting" in the description of the location. Scholars have previously contended that the FFA code, described as "Final Faith of America, or ask your friendly SM serviceman" in the Address Books could be implicitly referring to the group ‘Fist Fuckers of America,’ a group associated with the BDSM subculture of the time. The group allegedly met at the gay club Mineshaft, also located in New York.[^8]
 
 ```{r}
 ramrod.vis <- read.csv("~/Risky-New-York/gay guides data/ramrod.bar.categories.csv") 
@@ -60,14 +71,19 @@ ramrod.vis %>%
   arrange(Year)
 ```
 
+Although risky locations are commonly associated with cruising areas, Risky New York was everywhere: restaurants, bars, hotels, and even culture-oriented businesses like theaters were included in the landscape of violence against gay men and the queer community. To better assess the types of locations that were somehow assigned a risk factor in Damron's Books, I made the methodological choice of creating new analytic categories that could overcome the divergent typification strategies across 31 years of publication.
+
+<h4> Step 1: Read the data and formulate the question </h4>
+
+Tha gayguides data was originally divided in two large data sets. The 1965-1985 data set has been uploaded to the project's website and is constantly updated and made publicly available through an interactive leaflet map application. If the user filtered the map to show only locations that existed in the state of New York in 1980, for example, this is how it would look like:
 
 ```{r}
-risky.newyork <- read.csv("~/Risky-New-York/gay guides data/risky.newyork.csv")
+geocoded.gg.1965to1985 <- read.csv("~/Risky-New-York/gay guides data/geocoded.gg.1965to1985.csv")
 
-risky.newyork %>% group_by(Year) %>%
-  summarise(count = n()) %>% 
-  ggplot(aes(x = Year, y = count)) +
-  geom_line() + labs(title = 'Risk factor in gay New York City over the years', x = 'Year', y = 'Risky Locations')
+geocoded.nyc.1980 <- geocoded.gg.1965to1985 %>% 
+  filter(state == "NY" & Year == 1980)
+
+leaflet(data=geocoded.nyc.1980) %>% addTiles() %>% addMarkers(~lon, ~lat, popup = paste("Location Name:", geocoded.nyc.1980$title, ", ", "Type:", geocoded.nyc.1980$type))
 ```
 
 
@@ -77,4 +93,6 @@ risky.newyork %>% group_by(Year) %>%
 [^3]: Judith Walkowitz, <i> Prostitution and Victorian Society: Women ,Class, and the State</i> (Cambridge: Cambridge University Press, 1980); Jonh D'Emilio, <i> Sexual Politics, Sexual Communities: The Making of a Homosexual Minority in the United States, 1940-1970</i> (Chicago: University of Chicago Press, 1983); Estelle B. Freedman, "Sexuality in Nineteenth-Century America: Behavior, Ideology and Politics," <i> Reviews in American History</i> 10 (December 1982): 196-215; Linda Gordon, <i> Woman's Body, Woman's Right: A Social History of Birth Control in America</i> (New York: Grossman, 1976).
 [^4]: John D'Emilio and Estelle B. Freedman, <i>Intimate Matters: A History of Sexuality in America</i> (Chicago: Chicago University Press, 1988), 57-59.
 [^5]: John Brinckerhoff Jackson has discussed how our sense of place is intimately connected to our sense of shared time. Here, I use the notions of sense of place and sense of time to suggest that the thriving gay city (or, the gay world of appropriated places) was built on shared rituals and, as per Jackson, a shared "timetable:" Because gay men ritually returned to those same spaces in the city, they established a sense of place in those locations that solidified their belonging to a larger gay community and culture. See: John Brinckerhoff Jackson, <i>A Sense of Place, A Sense of Time</i> (Yale University Press, 1994), 157-160.
-[^6]: David K. Johnson, <i> Buying Gay: Ho Physique Entrepreneurs Sparked a Movement</i> (New York: Columbia University Press, 2019), 193.
+[^6]: David K. Johnson, <i> Buying Gay: How Physique Entrepreneurs Sparked a Movement</i> (New York: Columbia University Press, 2019), 193.
+[^7]: Thomas L. Long, <i>AIDS and American apocalypticism: the cultural semiotics of an epidemic</i> (Albany: State University of New York Press, 2005), 108-109.
+[^8]: For a recent example, see Larry Knopp and Michael Brown, "Travel Guides, Urban Spatial Imaginaries and LGBTQ+ activism: The case of Damron Guides," <i>Urban Studies</i> (February 2020): 1-17. 

@@ -47,9 +47,33 @@ type.count <- gayguides.complete %>%
   group_by(type) %>% 
   summarize(count = n())
 
+#keep a copy of the 1965-1985 gay guides data that was previously geocoded for potential exploratory analysis.
+data("gayguides")
+geocoded.gg.1965to1985 <- gayguides
+rm(gayguides)
+
 #subset data to NY locations only
 gaynewyork <- gayguides.complete %>% 
   filter(state == "NY")
+
+#create a geocoded version of the NY data
+gaynewyork$full.address <- paste(gaynewyork$streetaddress,  gaynewyork$city, gaynewyork$state, sep=", ")
+
+geo.gaynewyork <- gaynewyork %>% 
+  geocode(address = full.address, method='osm', lat = latitude, long = longitude)
+
+write.csv(geo.gaynewyork, file = "geo.gaynewyork.csv")
+
+#get NY counties
+state.newyork.map <- map_data('county', region = "new york")
+
+nyc.counties <- state.newyork.map %>% 
+  filter(subregion == "queens" | subregion == "bronx" | subregion == "richmond" | subregion == "kings" | subregion == "new york")
+
+ggplot() +
+  geom_map(data = state.newyork.map, map = state.newyork.map, aes(x = long, y = lat, map_id= region), fill = "pink", linewidth = 0.5, color="black") #+
+  geom_point(data = geo.gaynewyork, aes(x=longitude, y=latitude), size = 3, shape = 23, fill = "orange")
+
 
 #replace empty strings with NAs
 gaynewyork[gaynewyork == ''] <- NA
@@ -149,4 +173,4 @@ ramrod.vis <- gaynewyork %>%
   select(description, Year, amenityfeatures) %>% 
   na.exclude()
 
-ramrod.vis <- ramrod.vis[, c(4, 2, 3, 1)]
+ramrod.vis <- ramrod.vis[, c(2, 3, 1)]
