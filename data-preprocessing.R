@@ -1,3 +1,17 @@
+library(ggplot2) 
+library(tidyverse)
+library(DigitalMethodsData)
+library(ggmap)
+library(tidygeocoder)
+library(tidyr)
+library(dplyr)
+library(igraph)
+library(networkD3)
+library(ggraph)
+library(leaflet)
+library(leaftime)
+library(geojsonR)
+
 #load data from 1965 to 1985
 data(gayguides)
 gayguides1965to1985 <- gayguides
@@ -56,9 +70,6 @@ rm(gayguides)
 gaynewyork <- gayguides.complete %>% 
   filter(state == "NY")
 
-#create a geocoded version of the NY data
-gaynewyork$full.address <- paste(gaynewyork$streetaddress,  gaynewyork$city, gaynewyork$state, sep=", ")
-
 geo.gaynewyork <- gaynewyork %>% 
   mutate_if(is.character, trimws)
 
@@ -74,7 +85,7 @@ register_google(key = Sys.getenv("MGG_GOOGLE_KEY"))
 # Loop through the addresses to get the latitude and longitude of each address and add it to the origAddress data frame in new columns lat and lon
 for(i in 1:nrow(geo.gaynewyork)) {
   # Print("Working...")
-  result <- tryCatch(geocode(gaynewyork$full.address[i], output = "latlona", source = "google"), warning = function(w) data.frame(lon = NA, lat = NA, address = NA))
+  result <- tryCatch(geocode(geo.gaynewyork$full.address[i], output = "latlona", source = "google"), warning = function(w) data.frame(lon = NA, lat = NA, address = NA))
   geo.gaynewyork$lon[i] <- as.numeric(result[1])
   geo.gaynewyork$lat[i] <- as.numeric(result[2])
   geo.gaynewyork$geoAddress[i] <- as.character(result[3])
