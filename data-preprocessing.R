@@ -60,7 +60,25 @@ gaynewyork <- gayguides.complete %>%
 gaynewyork$full.address <- paste(gaynewyork$streetaddress,  gaynewyork$city, gaynewyork$state, sep=", ")
 
 geo.gaynewyork <- gaynewyork %>% 
-  geocode(address = full.address, method='osm', lat = latitude, long = longitude)
+  mutate_if(is.character, trimws)
+
+# paste together the street address, city and state in order to ensure we use full addresses for geocoding. Will minimize mistakes caused by common streetnames. 
+geo.gaynewyork$full.address <- paste(gaynewyork$streetaddress, ", ", gaynewyork$city, ", ", gaynewyork$state, sep="") 
+
+geo.gaynewyork <- geo.gaynewyork %>% 
+  filter(unclear_address != "checked" | unclear_address != "Location could not be verified. General coordinates used")
+
+# Register the google api code for the georeferencing service.
+register_google(key = Sys.getenv("MGG_GOOGLE_KEY"))
+
+# Loop through the addresses to get the latitude and longitude of each address and add it to the origAddress data frame in new columns lat and lon
+for(i in 1:nrow(geo.gaynewyork)) {
+  # Print("Working...")
+  result <- tryCatch(geocode(gaynewyork$full.address[i], output = "latlona", source = "google"), warning = function(w) data.frame(lon = NA, lat = NA, address = NA))
+  geo.gaynewyork$lon[i] <- as.numeric(result[1])
+  geo.gaynewyork$lat[i] <- as.numeric(result[2])
+  geo.gaynewyork$geoAddress[i] <- as.character(result[3])
+}
 
 write.csv(geo.gaynewyork, file = "geo.gaynewyork.csv")
 
