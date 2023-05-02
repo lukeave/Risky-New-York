@@ -1,286 +1,177 @@
-"","ID","title","description","streetaddress","city","state","amenityfeatures","type","unclear_address","Year"
-"1","3819","Lark St.","nr. Washington Park",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"2","3820","State St.","nr. Washington Park",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"3","3821","Willet St. ","nr. Washington Park",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"4","3824","Washington Park ","by lake & tennis courts ",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"5","3857","La Salle Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"6","3863","Woodlawn Beach",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"7","3916","Anvil ","(Disco) ","500 W. 14th Ave.","New York","NY","(P),(D),(RT),(AYOR),(F&S)","Bars/Clubs",NA,1986
-"8","4056","Port Authority Bldg. ","T-Room",NA,"New York","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"9","4057","Subway stations ",NA,NA,"New York","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"10","4082","Central Park ","Bethesda Fountain & The Rambles- West side betw. 72nd & 96th Sts.",NA,"New York","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"11","4117","'Vaseline Alley' ","37th Rd. by foot or car ","Mills Ave.","New York","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"12","4147","Syracuse U. ","Maxwell Hall downstairs T-Room",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"13","4161","Valley View Park ","off Utica Pkwy. ",NA,"Tupper Lake","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1986
-"14","3838","Lark","State & Willet Sts. nr. Washington Park",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1987
-"15","3842","Washington Park","by lake & tennis courts",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1987
-"16","3880","La Salle Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1987
-"17","3885","Woodlawn Beach","Lakeshore Rd. ",NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1987
-"18","4077","Port Authority Bldg. ",NA,NA,"Midtown","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1987
-"19","4078","Subway stations",NA,NA,"Midtown","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1987
-"20","4106","Central Park","Bethesda Fountain",NA,"Uptown","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1987
-"21","4142","'Vaseline Alley'","37th Rd. by foot or car",NA,"Queens","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1987
-"22","4209","Syracuse U.","Maxwell Hall downstairs",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1987
-"23","4224","Valley View Park","off Utica Pkwy.",NA,"Utica","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1987
-"24","4118","Bethesda Fountain & 
-The Rambles","West side betw. 72nd & 96th Sts.",NA,"Uptown","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"25","4239","Valley View Park","off Utica Pkwy.",NA,"Utica","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1988
-"26","4223","Syracuse U.","Maxwell Hall downstairs",NA,"Syracuse","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"27","4154","'Vaseline Alley'","37th Rd. by foot or car",NA,"Queens","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1988
-"28","4092","Subway stations",NA,NA,"Midtown","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"29","4091","Port Authority Bldg.",NA,NA,"Midtown","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"30","3929","Rumors","(Disco) (WE-hot) Exit 20 off Northway 87 to Rt. 149",NA,"Lake George","NY","(*),(D),(S),(V),(PT),(WE),(YC)","Bars/Clubs","checked",1988
-"31","3883","Woodlawn Beach","Lakeshore Rd.",NA,"Buffalo","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"32","3875","La Salle Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1988
-"33","3837","Washington Park","by lake & tennis courts",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1988
-"34","3834","Lark","State & Willet Sts. nr. Washington Park ",NA,"Albany","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"35","3907","Lark, State, & Willet Sts. nr. Washington Park",NA,NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"36","3909","Washington Park by lake & tennis courts",NA,NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"37","3946","La Salle Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"38","3950","Woodlawn Beach-Lakeshore Rd.",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"39","4131","Grand Central Station","(Busy lu's but AYOR)",NA,"New York ","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"40","4132","Penn Station","(Busy lu's but AYOR)",NA,"New York ","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"41","4133","Port Authority Bldg.",NA,NA,"New York ","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"42","4151","Central Park","Bethesda Fountain",NA,"New York ","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"43","4156","Bronx River Park btw. Glenn Rd. & Burke",NA,NA,"New York ","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"44","4214","'Rest Stop' 490 W. ",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"45","4215","Durand-Eastman Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"46","4216","Genesee Valley Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"47","4217","Manhattan Square Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"48","4218","Washington Square Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"49","4240","Syracuse U. ","Maxwell Hall (dwnstrs.)",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"50","4255","Valley View Park off Utica Pkwy.",NA,NA,"Utica","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"51","4118","Bethesda Fountain & 
-The Rambles","West side betw. 72nd & 96th Sts.",NA,"Uptown","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"52","4239","Valley View Park","off Utica Pkwy.",NA,"Utica","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1988
-"53","4223","Syracuse U.","Maxwell Hall downstairs",NA,"Syracuse","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"54","4154","'Vaseline Alley'","37th Rd. by foot or car",NA,"Queens","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1988
-"55","4092","Subway stations",NA,NA,"Midtown","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"56","4091","Port Authority Bldg.",NA,NA,"Midtown","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"57","3929","Rumors","(Disco) (WE-hot) Exit 20 off Northway 87 to Rt. 149",NA,"Lake George","NY","(*),(D),(S),(V),(PT),(WE),(YC)","Bars/Clubs","checked",1988
-"58","3883","Woodlawn Beach","Lakeshore Rd.",NA,"Buffalo","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"59","3875","La Salle Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1988
-"60","3837","Washington Park","by lake & tennis courts",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1988
-"61","3834","Lark","State & Willet Sts. nr. Washington Park ",NA,"Albany","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1988
-"62","3907","Lark, State, & Willet Sts. nr. Washington Park",NA,NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"63","3909","Washington Park by lake & tennis courts",NA,NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"64","3946","La Salle Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"65","3950","Woodlawn Beach-Lakeshore Rd.",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"66","4131","Grand Central Station","(Busy lu's but AYOR)",NA,"New York ","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"67","4132","Penn Station","(Busy lu's but AYOR)",NA,"New York ","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"68","4133","Port Authority Bldg.",NA,NA,"New York ","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"69","4151","Central Park","Bethesda Fountain",NA,"New York ","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"70","4156","Bronx River Park btw. Glenn Rd. & Burke",NA,NA,"New York ","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"71","4214","'Rest Stop' 490 W. ",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"72","4215","Durand-Eastman Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"73","4216","Genesee Valley Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"74","4217","Manhattan Square Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"75","4218","Washington Square Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"76","4240","Syracuse U. ","Maxwell Hall (dwnstrs.)",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"77","4255","Valley View Park off Utica Pkwy.",NA,NA,"Utica","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1989
-"78","3518","Lark, State, & Willet Sts near Washington Park",NA,NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1990
-"79","3529","Greyhound Bus Depot",NA,NA,"Binghampton","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1990
-"80","3548","La Salla Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1990
-"81","3552","Woodlawn Beach lakeshore Rd ",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1990
-"82","3553","'Rest Stop' on I-87 N. btwn exits 9 & 10 ",NA,NA,"Clifton Park","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1990
-"83","3723","Grand Central Station",NA,NA,"New York","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1990
-"84","3724","Penn Station",NA,NA,"New York","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1990
-"85","3725","Port Authority Bldg",NA,NA,"New York","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1990
-"86","3740","Central Park-Bethesda Fountain & the Rambles (W. side btwn 72nd & 96th)",NA,NA,"New York","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1990
-"87","3836","'Rest Stop' 490 W.",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1990
-"88","3727","Lark","State & Willet Sts. near Washington Park",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1991
-"89","3739","Greyhound Bus Depot",NA,NA,"Binghampton","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1991
-"90","3759","La Salle Park",NA,NA,"Buffalo","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1991
-"91","3762","Woodlawn Beach Lakeshore Rd.",NA,NA,"Buffalo","NY","(AYOR),Cruisy Area","Cruising Areas","checked",1991
-"92","3763","'Rest Stop' ","on I-87 N. btw exits 9 & 10",NA,"Clifton Park","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1991
-"93","3981","Grand Central & Penn Stations ",NA,NA,"Midtown","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1991
-"94","3982","Port Authority Bldg. ",NA,NA,"Midtown","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1991
-"95","3996","Central Park-Bethesda Fountain & the Rambles ",NA,"(W. side btwn 72nd & 96th)","Uptown","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1991
-"96","4094","'Rest Stop' 490 W. ",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1991
-"97","4095","Durand-Eastman Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1991
-"98","4038","La Salle Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"99","4039","U. of Buffalo Harriman Hall & Crosby Hall",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"100","4041","Woodlawn Beach Lakeshore Rd.",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"101","4044","'Rest Stop' on I-87 N. btwn exits 9 & 10",NA,NA,"Clifton Park","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"102","4068","Aviation Mall","nr. cinemas",NA,"Glens Falls","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"103","4078","Cornell U.-Willard Straight Hall & Olin Library ",NA,NA,"Ithaca","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"104","4226","Grand Central & Penn Stations",NA,NA,"N.Y.C. - Midtown","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"105","4227","Port Authority Bldg. ",NA,NA,"N.Y.C. - Midtown","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"106","4242","Central Park","'-Bethesda Fountain & the Rambles (W. side btwn 72nd & 96th)",NA,"N.Y.C. - Uptown","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"107","4243","Columbia University","Schermerhorn Bldg.",NA,"N.Y.C. - Uptown","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"108","4245","Van Cortland Park","Broadway & 24th St.",NA,"The Bronx","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"109","4344","'Rest Stop' 490 W.",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1992
-"110","4094","Lark, State & Willet Sts., nr. Washington Park","(AYOR)",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"111","4095","Northway Mall","(AYOR)",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"112","4128","La Salle Park","(AYOR)",NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"113","4129","U. of Buffalo","(AYOR)",NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"114","4130","Washington St. & Oak nr. bus depot","(Hustlers) (AYOR)",NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"115","4131","Woodlawn Beach, Lakeshore Rd.","(AYOR)",NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"116","4134","'Rest Stop' on I-87, N. btwn. exits 9 & 10","(AYOR)",NA,"Clifton Park","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"117","4158","Aviation Mall, trails in woods behind the mall","(AYOR)",NA,"Glens Falls","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"118","4169","Cornell U., Willard Straight Hall & Olin Library","(AYOR)",NA,"Ithaca","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"119","4170","Dewitt Park","(AYOR)",NA,"Ithaca","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"120","4185","'Rest Stop' on I-84 btwn. Middleton & New Hampton along woods","(AYOR)",NA,"Middletown","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"121","4307","Grand Central & Penn Stations","(AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"122","4308","Port Authority Bldg.","(AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"123","4321","Central Park-Bethesda Fountain & Rambles (W. side btwn. 72nd & 96th","(AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"124","4322","Columbia University, Schermerhorn Bldg.","(AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"125","4323","Van Cortland Park, Broadway & 24th St.","(AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"126","4332","Brooklyn's ""Promenade', just off Montague St.","(AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"127","4351","Queens College","(every good queen should go there!) (AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"128","4371","Beach at end of Two Mile Hollow Rd.","(go left) (East Hampton) (AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"129","4372","Fowler Beach, go right, Southampton","(AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"130","4373","Jones Beach, dunes & bushes E. of parking field #6","(AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"131","4374","'Rest Stop' on Sunrise Hwy. -exit both sides W. of Shinnecock Canal","(AYOR)",NA,"New York City","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"132","4421","Durand-Eastman Park","(AYOR)",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"133","4422","'Rest Stop', 409 W.","(AYOR)",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"134","4423","Congress Park - summers, after dusk","(AYOR)",NA,"Saratoga Springs","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"135","4440","Thorndon Park nr. Water Tower","(AYOR)",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"136","4445","'Rest Stops', 15 mi. N. on I-684","(AYOR)",NA,"White Plains","NY","Cruisy Area,(AYOR)","Cruisy Areas","checked",1993
-"137","3726","Lark, State & Willet Sts.","nr. Washington Park",NA,"Albany","NY","Cruisy Area,(H),(AYOR)","Cruising Areas","checked",1994
-"138","3785","Aviation Mall","trails in woods behind the mall",NA,"Glens Falls","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1994
-"139","3958","Central Park ","Bethesda Fountain & Rambles, W. side btwn. 72nd & 96th ",NA,"N.Y.C. - Uptown","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1994
-"140","3966","Shore Rd. ","from 95th St. to 3rd Ave. ",NA,"N.Y.C. - Brooklyn","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1994
-"141","3999","Beach","at left end of Two Mile Hollow Rd., E. Hampton",NA,"N.Y.C. - Long Island/Suffolk County","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1994
-"142","4000","Fowler Beach ","go right, Southhampton ",NA,"N.Y.C. - Long Island/Suffolk County","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1994
-"143","4042","Congress Park","summers, after dusk ",NA,"Saratoga Springs","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1994
-"144","4055","Thorndon Park ","nr. Water Tower ",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1994
-"145","3947","Lark, State & Willet Sts.","(AYOR)","nr. Washington Park","Albany","NY","Cruisy Area,(H),(AYOR)","Cruising Areas","checked",1995
-"146","4007","Aviation Mall","(AYOR)","trails in woods behind the mall","Glens Falls","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1995
-"147","4018","Reservoir at Upper Six Mile Creek","(AYOR)","at Van Etten Dam Waterfalls","Ithaca","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1995
-"148","4213","Beach","(AYOR)","at left end of Two Mile Hollow Rd., E. Hampton","New York City","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1995
-"149","4214","Fowler Beach","(AYOR)","go right, Southampton","New York City","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1995
-"150","4227","Club Alternative","inquire locally","429 19th St. (at ferry)","New York City","NY","D","Bars",NA,1995
-"151","4268","Congress Park","summers, after dusk (AYOR)",NA,"Saratoga Springs","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1995
-"152","4156","Lark, State & Willet Sys.","nr. Washington Park",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1996
-"153","4219","Aviation Mall ","trails in woods behind the mall",NA,"Glen Falls","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1996
-"154","4231","Reservoir at Upper Six Mile Creek","at Van Etten Damn Waterfalls",NA,"Ithaca","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1996
-"155","4437","Beach at end of Two Mile Hollow Rd.","go left, East Hampton ",NA,"N.Y.C. - Long Island/Suffolk County","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1996
-"156","4438","Fowle Beach ","go right, Southampton  ",NA,"N.Y.C. - Long Island/Suffolk County","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1996
-"157","4443","Club Alternate ","inquire locally ","492 19th St. (Ferry)","Niagara Falls","NY","(M),(D)","Bars",NA,1996
-"158","4482","Congress Park ","summers after dusk ",NA,"Saratoga Springs","NY","Cruisy Area,(AYOR)","Cruising Areas","checked",1996
-"159","2196","'Vaseline Alley'","37th Rd. by foot or car",NA,"Queens","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1981
-"160","3439","'Vaseline Alley'","(37th Rd. by foot or car) (AYOR)",NA,"Queens","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1982
-"161","3738","'Vaseline Alley'","by foot or car","37th Rd.","Queens","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1983
-"162","3778","'Vaseline Alley'","37th Rd. by foot or car",NA,"Queens","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1984
-"163","4011","'Vaseline Alley'","(37th Rd. by foot or car)",NA,"Queens","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1985
-"164","1965","Anvil","(Disco)('Back room') at 11th Ave.","500 W. 14th","Greenwich Village","NY","(D),(P),(RT),(AYOR)","Bars/Clubs","Google Verified Location",1981
-"165","3217","Anvil","(Disco) (AYOR) ('Back Room') (Also called J's)","500 W. 14th at 11th Ave.","Greenwich Village","NY","(P),(D),(RT),(AYOR)","Bars/Clubs","Verified Location",1982
-"166","3495","Anvil","(Disco)('Back room') at 11th Ave.","500 W. 14th","Greenwich Village & Chelsea","NY","(D),(RT),(AYOR),(P)","Bars/Clubs","Google Verified Location",1983
-"167","3563","Anvil","(Disco)","500 W. 14th at 11th Ave.","Greenwich Village","NY","(P),(D),(RT),(AYOR),(F&S)","Bars/Clubs","Verified Location",1984
-"168","3819","Anvil","(Disco) (at 11th Ave.)","500 W. 14th","Greenwich Village","NY","(P),(D),(RT),(AYOR),(F&S)","Bars/Clubs","Verified Location",1985
-"169","3154","Capri Art Theatre","(AYOR - 'Fuzz')","3165 Bailey","Buffalo","NY","(M),(AYOR)","Theatre,Cruising Areas","Google Verified Location",1982
-"170","3427","Capri Art Theatre","(AYOR - 'Fuzz')","3165 Bailey Ave.","Buffalo","NY","(M),(AYOR)","Theatre,Cruising Areas","Google Verified Location",1983
-"171","2160","Central Park","Bethesda Fountain",NA,"Uptown","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1981
-"172","3408","Central Park","(Bethesda Fountain) (AYOR)",NA,"Uptown","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1982
-"173","3704","Central Park","(West side betw . 72nd & 96th Sts.) (Bethesda Fountain)",NA,"Uptown","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1983
-"174","3975","Central Park","(Bethesda Fountain)",NA,"Uptown- N.Y.C.","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1985
-"175","2256","Columbus Circle","'Fuzz' posing as hustlers",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1981
-"176","3496","Columbus Circle","(AYOR) ('Fuzz' posing as hustlers)",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1982
-"177","3513","Delaware Park","(Days)",NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"178","3471","Durand-Eastman Park","(AYOR)",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1982
-"179","3776","Durand-Eastman Park","(Note: All should be visited strictly AYOR)",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1983
-"180","3810","Durand-Eastman Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"181","3777","Genesee Valley Park","(Note: All should be visited strictly AYOR)",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1983
-"182","3811","Genesee Valley Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"183","3472","Genessee Valley Park","(AYOR)",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1982
-"184","2247","Jefferson-Clinton Hotel Bar","(Downstairs T-Room is AYOR)","Jefferson & Clinton","Syracuse","NY","(M),(OC),(AYOR)","Bars/Clubs,Hotel","Verified Location",1981
-"185","3488","Jefferson-Clinton Hotel Bar","(Downstairs T-Room is AYOR)","Jefferson & Clinton","Syracuse","NY","(M),(OC),(AYOR)","Bars/Clubs,Hotel","Verified Location",1982
-"186","3515","La Salla Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"187","3168","La Salle Park","(AYOR)",NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1982
-"188","3445","La Salle Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1983
-"189","3760","La Salle Park",NA,NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1985
-"190","3483","Lark, State & Willet Sts.","nr. Washington Park",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1984
-"191","3723","Lark, State & Willet Sts.","(nr. Washington Park)",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1985
-"192","1945","Long Island Railroad Station & Bus Terminal",NA,NA,"Hempstead","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1981
-"193","3197","Long Island Railroad Station & Bus Terminal","(AYOR)",NA,"Hempstead","NY","(AYOR),Cruisy Area","Cruising Areas","Verified Location",1982
-"194","3476","Long Island Railroad Station & Bus Terminal",NA,NA,"Hempstead","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1983
-"195","3541","Long Island Railroad Station & Bus Terminal",NA,NA,"Hempstead","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"196","3793","Long Island Railroad Station & Bus Terminal",NA,NA,"Hempstead","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1985
-"197","3474","Manhattan Square Park","(AYOR)",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1982
-"198","3778","Manhattan Square Park","(Note: All should be visited strictly AYOR)",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1983
-"199","3812","Manhattan Square Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"200","3352","Night Shift","(Theatre) (AYOR)","777 8th Ave. at 48th St.","Midtown","NY","(AYOR)","Theatre","Verified Location",1982
-"201","3950","Subway Station",NA,NA,"Midtown","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1985
-"202","2128","Subway Stations",NA,NA,"Midtown","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1981
-"203","3374","Subway Stations","(AYOR)",NA,"Midtown","NY","(AYOR),Cruisy Area","Cruising Areas","Verified Location",1982
-"204","3671","Subway Stations",NA,NA,"Midtown","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1983
-"205","3716","Subway Stations",NA,NA,"Midtown","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1984
-"206","3497","Syracuse U.","(Maxwell Hall - downstairs T-Room) (AYOR)",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1982
-"207","3802","Syracuse U.","(downstairs T-Room) (Maxwell Hall)",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1983
-"208","3833","Syracuse U.","Maxwell Hall - downstairs T-Room",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"209","4068","Syracuse U.","(Maxwell Hall downstairs T-Room)",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1985
-"210","3847","Valley View Park","off Utica Parkway",NA,"Utica","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"211","4082","Valley View Park off Utica Pkwy.",NA,NA,"Utica","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1985
-"212","3486","Washington Park",NA,NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"213","3726","Washington Park","(by lake & tennis courts)",NA,"Albany","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1985
-"214","3473","Washington Square Park","(Court at Clinton) (AYOR)",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1982
-"215","3779","Washington Square Park","Court at Clinton (Note: All should be visited strictly AYOR)",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1983
-"216","3813","Washington Square Park","Court at Clinton",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"217","1919","Woodlawn Beach",NA,"Lakeshore Rd.","Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1981
-"218","3172","Woodlawn Beach","(Lakeshore Rd.) (AYOR)",NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1982
-"219","3450","Woodlawn Beach",NA,"Lakeshore Rd.","Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1983
-"220","3519","Woodlawn Beach","Lakeshore Rd.",NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1984
-"221","3765","Woodlawn Beach",NA,"Lakeshore Rd.","Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1985
-"222","NY034","Mr. Goodbar","(Very M) (Disco) (Best around bar)","1110 Elmwood Ave.","Buffalo","NY","(M),(D),(AYOR)","Bars/Clubs","Google Verified Location",1980
-"223","NY049","Woodlawn Beach","Lakeshore Rd.",NA,"Buffalo","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1980
-"224","NY2679","Out of This World","(Supposedly re-opned, inquire locally)",NA,"East Hampton","NY",NA,"Bars/Clubs","Location could not be verified. General city or location coordinates used.",1971
-"225","NY2682","Bat Cave","(Inquire locally)",NA,"Fire Island","NY",NA,"Bars/Clubs","Verified Location",1971
-"226","NY411","Anvil","(Disco) ('Back room') at 11th Ave.","500 W. 14th","Greenwich Village","NY","(P),(D),(RT),(AYOR)","Bars/Clubs","Google Verified Location",1980
-"227","NY568","Bank St. Piers","(Extremely dangerous- murders, muggings, punk kids in cars attacking single gays)",NA,"Greenwich Village","NY","(AYOR),Cruisy Area","Cruising Areas","Location could not be verified. General city or location coordinates used.",1979
-"228","NY941","Bank St. Piers","(Extremely dangerous- murders, beatings, muggings, etc.)",NA,"Greenwich Village","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1978
-"229","NY1248","Make Believe Ballroom","Inquire locally",NA,"Greenwich Village","NY","(M),(E),(R)","Restaurant","Location could not be verified. General city or location coordinates used.",1977
-"230","NY1287","Bank Street Piers","(Extremely dangerous- murders, beatings, muggings, etc. AYOR)",NA,"Greenwich Village","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1977
-"231","NY1806","Kooky's",NA,"149 W. 14th St.","Greenwich Village","NY","(RT),(G),(D),(*),(AYOR)","Bars/Clubs","Google Verified Location",1975
-"232","NY067","Long Island Railroad Station & Bus Terminal",NA,NA,"Hempstead","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1980
-"233","NY471","Long Island Railroad Station & Bus Terminal",NA,NA,"Hempstead","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1979
-"234","NY863","Long Island R.R. Station & Bus Terminal",NA,NA,"Hempstead","NY","(AYOR),Cruisy Area","Cruising Areas","Verified Location",1978
-"235","NY1189","Long Island Rail Road Station and Bus Terminal",NA,NA,"Hempstead","NY","(AYOR),Cruisy Area","Cruising Areas","Verified Location",1977
-"236","NY1538","L.I. Railroad Station","(HOT)",NA,"Hempstead","NY","Cruisy Area,(HOT)","Cruising Areas","Verified Location",1976
-"237","NY2893","Club Baths","(inquire locally)",NA,"Manhattan","NY",NA,"Baths","Verified Location",1970
-"238","NY2919","Sebastian","(inquire locally)",NA,"Manhattan","NY","(R)","Restaurant","Location could not be verified. General city or location coordinates used.",1970
-"239","NY3026","Mystique","(moving soon-inquire locally for new address)","256 E 49th St.","Manhattan","NY","(P),(D),(PE),(*)","Bars/Clubs","Google Verified Location",1969
-"240","NY233","Subway Stations",NA,NA,"Midtown","NY","(AYOR),Cruisy Area","Cruising Areas","Location could not be verified. General city or location coordinates used.",1980
-"241","NY595","David All Male Cinema","(use lounge- AYOR)","28 W. 55th St.","Midtown","NY","(AYOR)","Theatre","Google Verified Location",1979
-"242","NY638","Subway Stations",NA,NA,"Midtown","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1979
-"243","NY997","Subway Stations",NA,NA,"Midtown","NY","(AYOR),Cruisy Area","Cruising Areas","Location could not be verified. General city or location coordinates used.",1978
-"244","NY1353","Manhattan Subway Stations",NA,NA,"Midtown","NY","(AYOR),Cruisy Area","Cruising Areas","Location could not be verified. General city or location coordinates used.",1977
-"245","NY2454","Fife & Drum","Inquire locally",NA,"Plattsburg","NY",NA,"Bars/Clubs","Verified Location",1973
-"246","NY2642","Fife & Drum","Inquire locally",NA,"Plattsburg","NY",NA,"Bars/Clubs","Verified Location",1972
-"247","NY304","'Vaseline Alley'","37th Rd. by foot or car",NA,"Queens","NY","Cruisy Area,(AYOR)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1980
-"248","NY710","'Vaseline Alley'","37th Rd. by foot or car (HOT)",NA,"Queens","NY","Cruisy Area,(HOT)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1979
-"249","NY1056","'Vaseline Alley'","37th Rd. by foot or car (HOT)",NA,"Queens","NY","Cruisy Area,(HOT)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1978
-"250","NY1415","'Vaseline Alley'","37th Rd.- by car or foot (HOT)",NA,"Queens","NY","Cruisy Area,(HOT)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1977
-"251","NY1945","'Vaseline Alley'","by car or foot 37th Rd. (HOT!)",NA,"Queens","NY","Cruisy Area,(HOT)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1975
-"252","NY2228","'Vaseline Alley'","by car or walking- 37th Rd. (Hot!)",NA,"Queens","NY","Cruisy Area,(HOT)","Cruising Areas","Location could not be verified. General city or location coordinates used.",1974
-"253","NY338","Broad St. Bridge",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1980
-"254","NY339","Durand-Eastman Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1980
-"255","NY340","Genesee Valley Park",NA,NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1980
-"256","NY341","Washington Square Park","Court at Clinton",NA,"Rochester","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1980
-"257","NY747","Broad St. Bridge",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1979
-"258","NY748","Durand-Eastman Park",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1979
-"259","NY749","Genessee Valley Park",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1979
-"260","NY750","Washington Square Park","Court at Clinton",NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1979
-"261","NY1082","Broad St. Bridge",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1978
-"262","NY1083","Court & South Sts.",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1978
-"263","NY1084","Durand- Eastman Park",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1978
-"264","NY1085","Genessee Valley Park",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1978
-"265","NY1444","Broad St. Bridge",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1977
-"266","NY1445","Court & South Sts.",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1977
-"267","NY1446","Durand- Eastman Park",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1977
-"268","NY1447","Genesee Valley Park",NA,NA,"Rochester","NY","Cruisy Area,(HOT),(AYOR)","Cruising Areas","Verified Location",1977
-"269","NY1682","Broad St. Bridge","(HOT)",NA,"Rochester","NY","Cruisy Area,(HOT)","Cruising Areas","Verified Location",1976
-"270","NY1683","Court & South Sts.","(HOT)",NA,"Rochester","NY","Cruisy Area,(HOT)","Cruising Areas","Verified Location",1976
-"271","NY1684","Durand- Eastman Park","(HOT)",NA,"Rochester","NY","Cruisy Area,(HOT)","Cruising Areas","Verified Location",1976
-"272","NY1685","Gennessee Valley Park","(HOT)",NA,"Rochester","NY","Cruisy Area,(HOT)","Cruising Areas","Verified Location",1976
-"273","NY1970","Broad St. Bridge","(HOT)",NA,"Rochester","NY","Cruisy Area,(HOT)","Cruising Areas","Verified Location",1975
-"274","NY361","Jefferson-Clinton Hotel Bar","(Downstairs T-Room is AYOR) Jefferson & Clinton",NA,"Syracuse","NY","(M),(OC),(AYOR)","Bars/Clubs,Hotel","Verified Location",1980
-"275","NY371","Columbus Circle","'Fuzz' posing as hustlers",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1980
-"276","NY766","Jefferson-Clinton Hotel Bar","(Downstairs T-Room is HOT-AYOR) Jefferson & Clinton",NA,"Syracuse","NY","(M),(OC),(H),(AYOR)","Bars/Clubs,Hotel","Verified Location",1979
-"277","NY771","Columbus Circle","'Fuzz' posing as 'Hustlers'",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1979
-"278","NY1102","Columbus Circle","'Fuzz' posing as hustlers",NA,"Syracuse","NY","(AYOR),Cruisy Area","Cruising Areas","Verified Location",1978
-"279","NY1464","Columbus Circle","'Fuzz' posing as hustlers",NA,"Syracuse","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1977
-"280","NY266","Central Park- Bethesda Fountain",NA,NA,"Uptown","NY","(AYOR),Cruisy Area","Cruising Areas","Verified Location",1980
-"281","NY675","Central Park","Bethesda Fountain",NA,"Uptown","NY","(AYOR),Cruisy Area","Cruising Areas","Verified Location",1979
-"282","NY1026","Central Park- Bethesda Fountain",NA,NA,"Uptown","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1978
-"283","NY1389","Central Park- Bethesda Fountain","(AYOR)",NA,"Uptown","NY","Cruisy Area,(AYOR)","Cruising Areas","Verified Location",1977
+"","X","ID","title","description","streetaddress","type","amenityfeatures","city","state","Year","lat","lon","categories","cruisy"
+"1",1052,"2196","'Vaseline Alley'","37th Rd. by foot or car","","Cruising Areas","Cruisy Area,(AYOR)","Queens","NY",1981,40.747118,-73.892407,"Cruising Areas","TRUE"
+"2",1053,"3439","'Vaseline Alley'","(37th Rd. by foot or car) (AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Queens","NY",1982,40.747118,-73.892407,"Cruising Areas","TRUE"
+"3",1054,"3738","'Vaseline Alley'","by foot or car","37th Rd.","Cruising Areas","Cruisy Area,(AYOR)","Queens","NY",1983,40.747118,-73.892407,"Cruising Areas","TRUE"
+"4",1055,"3778","'Vaseline Alley'","37th Rd. by foot or car","","Cruising Areas","Cruisy Area,(AYOR)","Queens","NY",1984,40.747118,-73.892407,"Cruising Areas","TRUE"
+"5",1056,"4011","'Vaseline Alley'","(37th Rd. by foot or car)","","Cruising Areas","Cruisy Area,(AYOR)","Queens","NY",1985,40.747118,-73.892407,"Cruising Areas","TRUE"
+"6",2192,"1965","Anvil","(Disco)('Back room') at 11th Ave.","500 W. 14th","Bars/Clubs","(D),(P),(RT),(AYOR)","Greenwich Village","NY",1981,40.7421136,-74.0085052,"Bars","FALSE"
+"7",2193,"3217","Anvil","(Disco) (AYOR) ('Back Room') (Also called J's)","500 W. 14th at 11th Ave.","Bars/Clubs","(P),(D),(RT),(AYOR)","Greenwich Village","NY",1982,40.742114,-74.008505,"Bars","FALSE"
+"8",2194,"3495","Anvil","(Disco)('Back room') at 11th Ave.","500 W. 14th","Bars/Clubs","(D),(RT),(AYOR),(P)","Greenwich Village & Chelsea","NY",1983,40.7421136,-74.0085052,"Bars","FALSE"
+"9",2195,"3563","Anvil","(Disco)","500 W. 14th at 11th Ave.","Bars/Clubs","(P),(D),(RT),(AYOR),(F&S)","Greenwich Village","NY",1984,40.742114,-74.008505,"Bars","FALSE"
+"10",2196,"3819","Anvil","(Disco) (at 11th Ave.)","500 W. 14th","Bars/Clubs","(P),(D),(RT),(AYOR),(F&S)","Greenwich Village","NY",1985,40.742114,-74.008505,"Bars","FALSE"
+"11",4881,"3154","Capri Art Theatre","(AYOR - 'Fuzz')","3165 Bailey","Theatre,Cruising Areas","(M),(AYOR)","Buffalo","NY",1982,42.940922,-78.813359,"Businesses","TRUE"
+"12",4882,"3427","Capri Art Theatre","(AYOR - 'Fuzz')","3165 Bailey Ave.","Theatre,Cruising Areas","(M),(AYOR)","Buffalo","NY",1983,42.940922,-78.813359,"Businesses","TRUE"
+"13",5241,"2160","Central Park","Bethesda Fountain","","Cruising Areas","Cruisy Area,(AYOR)","Uptown","NY",1981,40.773823,-73.970818,"Cruising Areas","TRUE"
+"14",5247,"3408","Central Park","(Bethesda Fountain) (AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Uptown","NY",1982,40.773823,-73.970818,"Cruising Areas","TRUE"
+"15",5255,"3704","Central Park","(West side betw . 72nd & 96th Sts.) (Bethesda Fountain)","","Cruising Areas","Cruisy Area,(AYOR)","Uptown","NY",1983,40.773823,-73.970818,"Cruising Areas","TRUE"
+"16",5265,"3975","Central Park","(Bethesda Fountain)","","Cruising Areas","Cruisy Area,(AYOR)","Uptown- N.Y.C.","NY",1985,40.773823,-73.970818,"Cruising Areas","TRUE"
+"17",6427,"2256","Columbus Circle","'Fuzz' posing as hustlers","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1981,43.046838,-76.149117,"Cruising Areas","TRUE"
+"18",6428,"3496","Columbus Circle","(AYOR) ('Fuzz' posing as hustlers)","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1982,43.046838,-76.149117,"Cruising Areas","TRUE"
+"19",7407,"3513","Delaware Park","(Days)","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1984,42.933772,-78.858974,"Cruising Areas","TRUE"
+"20",8210,"3471","Durand-Eastman Park","(AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1982,43.239327,-77.569,"Cruising Areas","TRUE"
+"21",8211,"3776","Durand-Eastman Park","(Note: All should be visited strictly AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1983,43.239327,-77.569,"Cruising Areas","TRUE"
+"22",8212,"3810","Durand-Eastman Park","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1984,43.239327,-77.569,"Cruising Areas","TRUE"
+"23",10315,"3777","Genesee Valley Park","(Note: All should be visited strictly AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1983,43.239327,-77.569,"Cruising Areas","TRUE"
+"24",10316,"3811","Genesee Valley Park","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1984,43.239327,-77.569,"Cruising Areas","TRUE"
+"25",10322,"3472","Genessee Valley Park","(AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1982,43.239327,-77.569,"Cruising Areas","TRUE"
+"26",12582,"2247","Jefferson-Clinton Hotel Bar","(Downstairs T-Room is AYOR)","Jefferson & Clinton","Bars/Clubs,Hotel","(M),(OC),(AYOR)","Syracuse","NY",1981,43.047289,-76.15385,"Accommodations","FALSE"
+"27",12583,"3488","Jefferson-Clinton Hotel Bar","(Downstairs T-Room is AYOR)","Jefferson & Clinton","Bars/Clubs,Hotel","(M),(OC),(AYOR)","Syracuse","NY",1982,43.047289,-76.15385,"Accommodations","FALSE"
+"28",13313,"3515","La Salla Park","","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1984,42.888675,-78.890913,"Cruising Areas","TRUE"
+"29",13318,"3168","La Salle Park","(AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1982,42.888675,-78.890913,"Cruising Areas","TRUE"
+"30",13319,"3445","La Salle Park","","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1983,42.888675,-78.890913,"Cruising Areas","TRUE"
+"31",13320,"3760","La Salle Park","","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1985,42.888675,-78.890913,"Cruising Areas","TRUE"
+"32",13535,"3483","Lark, State & Willet Sts.","nr. Washington Park","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1984,42.659254,-73.776606,"Cruising Areas","TRUE"
+"33",13536,"3723","Lark, State & Willet Sts.","(nr. Washington Park)","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1985,42.659254,-73.776606,"Cruising Areas","TRUE"
+"34",14194,"1945","Long Island Railroad Station & Bus Terminal","","","Cruising Areas","Cruisy Area,(AYOR)","Hempstead","NY",1981,40.712071,-73.624797,"Cruising Areas","TRUE"
+"35",14195,"3197","Long Island Railroad Station & Bus Terminal","(AYOR)","","Cruising Areas","(AYOR),Cruisy Area","Hempstead","NY",1982,40.712071,-73.624797,"Cruising Areas","TRUE"
+"36",14196,"3476","Long Island Railroad Station & Bus Terminal","","","Cruising Areas","Cruisy Area,(AYOR)","Hempstead","NY",1983,40.712071,-73.624797,"Cruising Areas","TRUE"
+"37",14197,"3541","Long Island Railroad Station & Bus Terminal","","","Cruising Areas","Cruisy Area,(AYOR)","Hempstead","NY",1984,40.712071,-73.624797,"Cruising Areas","TRUE"
+"38",14198,"3793","Long Island Railroad Station & Bus Terminal","","","Cruising Areas","Cruisy Area,(AYOR)","Hempstead","NY",1985,40.712071,-73.624797,"Cruising Areas","TRUE"
+"39",15137,"3474","Manhattan Square Park","(AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1982,43.153475,-77.601744,"Cruising Areas","TRUE"
+"40",15138,"3778","Manhattan Square Park","(Note: All should be visited strictly AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1983,43.153475,-77.601744,"Cruising Areas","TRUE"
+"41",15139,"3812","Manhattan Square Park","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1984,43.153475,-77.601744,"Cruising Areas","TRUE"
+"42",16635,"3352","Night Shift","(Theatre) (AYOR)","777 8th Ave. at 48th St.","Theatre","(AYOR)","Midtown","NY",1982,40.7608,-73.987549,"Businesses","FALSE"
+"43",22135,"3950","Subway Station","","","Cruising Areas","Cruisy Area,(AYOR)","Midtown","NY",1985,40.768687,-73.958443,"Cruising Areas","TRUE"
+"44",22136,"2128","Subway Stations","","","Cruising Areas","Cruisy Area,(AYOR)","Midtown","NY",1981,40.768687,-73.958443,"Cruising Areas","TRUE"
+"45",22137,"3374","Subway Stations","(AYOR)","","Cruising Areas","(AYOR),Cruisy Area","Midtown","NY",1982,40.768687,-73.958443,"Cruising Areas","TRUE"
+"46",22138,"3671","Subway Stations","","","Cruising Areas","Cruisy Area,(AYOR)","Midtown","NY",1983,40.768687,-73.958443,"Cruising Areas","TRUE"
+"47",22139,"3716","Subway Stations","","","Cruising Areas","Cruisy Area,(AYOR)","Midtown","NY",1984,40.768687,-73.958443,"Cruising Areas","TRUE"
+"48",22378,"3497","Syracuse U.","(Maxwell Hall - downstairs T-Room) (AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1982,43.038403,-76.136253,"Cruising Areas","TRUE"
+"49",22379,"3802","Syracuse U.","(downstairs T-Room) (Maxwell Hall)","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1983,43.038403,-76.136253,"Cruising Areas","TRUE"
+"50",22380,"3833","Syracuse U.","Maxwell Hall - downstairs T-Room","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1984,43.038403,-76.136253,"Cruising Areas","TRUE"
+"51",22381,"4068","Syracuse U.","(Maxwell Hall downstairs T-Room)","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1985,43.038403,-76.136253,"Cruising Areas","TRUE"
+"52",24660,"3847","Valley View Park","off Utica Parkway","","Cruising Areas","Cruisy Area,(AYOR)","Utica","NY",1984,43.079811,-75.234715,"Cruising Areas","TRUE"
+"53",24661,"4082","Valley View Park off Utica Pkwy.","","","Cruising Areas","Cruisy Area,(AYOR)","Utica","NY",1985,43.079811,-75.234715,"Cruising Areas","TRUE"
+"54",25112,"3486","Washington Park","","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1984,42.658355,-73.772791,"Cruising Areas","TRUE"
+"55",25114,"3726","Washington Park","(by lake & tennis courts)","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1985,42.658355,-73.772791,"Cruising Areas","TRUE"
+"56",25117,"3473","Washington Square Park","(Court at Clinton) (AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1982,43.15345,-77.605307,"Cruising Areas","TRUE"
+"57",25118,"3779","Washington Square Park","Court at Clinton (Note: All should be visited strictly AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1983,43.15345,-77.605307,"Cruising Areas","TRUE"
+"58",25119,"3813","Washington Square Park","Court at Clinton","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1984,43.15345,-77.605307,"Cruising Areas","TRUE"
+"59",25672,"1919","Woodlawn Beach","","Lakeshore Rd.","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1981,42.789146,-78.851962,"Cruising Areas","TRUE"
+"60",25673,"3172","Woodlawn Beach","(Lakeshore Rd.) (AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1982,42.789146,-78.851962,"Cruising Areas","TRUE"
+"61",25674,"3450","Woodlawn Beach","","Lakeshore Rd.","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1983,42.789146,-78.851962,"Cruising Areas","TRUE"
+"62",25675,"3519","Woodlawn Beach","Lakeshore Rd.","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1984,42.789146,-78.851962,"Cruising Areas","TRUE"
+"63",25676,"3765","Woodlawn Beach","","Lakeshore Rd.","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1985,42.789146,-78.851962,"Cruising Areas","TRUE"
+"64",29513,"NY034","Mr. Goodbar","(Very M) (Disco) (Best around bar)","1110 Elmwood Ave.","Bars/Clubs","(M),(D),(AYOR)","Buffalo","NY",1980,42.9274779,-78.8772313,"Bars","FALSE"
+"65",29528,"NY049","Woodlawn Beach","Lakeshore Rd.","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1980,42.789146,-78.851962,"Cruising Areas","TRUE"
+"66",34534,"NY2679","Out of This World","(Supposedly re-opned, inquire locally)","","Bars/Clubs","","East Hampton","NY",1971,40.963434,-72.184801,"Bars","FALSE"
+"67",35232,"NY2682","Bat Cave","(Inquire locally)","","Bars/Clubs","","Fire Island","NY",1971,40.659053,-73.089293,"Bars","FALSE"
+"68",36683,"NY411","Anvil","(Disco) ('Back room') at 11th Ave.","500 W. 14th","Bars/Clubs","(P),(D),(RT),(AYOR)","Greenwich Village","NY",1980,40.7421672,-74.0084683,"Bars","FALSE"
+"69",36760,"NY568","Bank St. Piers","(Extremely dangerous- murders, muggings, punk kids in cars attacking single gays)","","Cruising Areas","(AYOR),Cruisy Area","Greenwich Village","NY",1979,40.736453,-74.010241,"Cruising Areas","TRUE"
+"70",36833,"NY941","Bank St. Piers","(Extremely dangerous- murders, beatings, muggings, etc.)","","Cruising Areas","Cruisy Area,(AYOR)","Greenwich Village","NY",1978,40.736453,-74.010241,"Cruising Areas","TRUE"
+"71",36885,"NY1248","Make Believe Ballroom","Inquire locally","","Restaurant","(M),(E),(R)","Greenwich Village","NY",1977,40.733572,-74.002742,"Restaurants","FALSE"
+"72",36924,"NY1287","Bank Street Piers","(Extremely dangerous- murders, beatings, muggings, etc. AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Greenwich Village","NY",1977,40.736453,-74.010241,"Cruising Areas","TRUE"
+"73",37038,"NY1806","Kooky's","","149 W. 14th St.","Bars/Clubs","(RT),(G),(D),(*),(AYOR)","Greenwich Village","NY",1975,40.7384534,-73.9988653,"Bars","FALSE"
+"74",37773,"NY067","Long Island Railroad Station & Bus Terminal","","","Cruising Areas","Cruisy Area,(AYOR)","Hempstead","NY",1980,40.712071,-73.624797,"Cruising Areas","TRUE"
+"75",37774,"NY471","Long Island Railroad Station & Bus Terminal","","","Cruising Areas","Cruisy Area,(AYOR)","Hempstead","NY",1979,40.712071,-73.624797,"Cruising Areas","TRUE"
+"76",37775,"NY863","Long Island R.R. Station & Bus Terminal","","","Cruising Areas","(AYOR),Cruisy Area","Hempstead","NY",1978,40.712071,-73.624797,"Cruising Areas","TRUE"
+"77",37776,"NY1189","Long Island Rail Road Station and Bus Terminal","","","Cruising Areas","(AYOR),Cruisy Area","Hempstead","NY",1977,40.712071,-73.624797,"Cruising Areas","TRUE"
+"78",37778,"NY1538","L.I. Railroad Station","(HOT)","","Cruising Areas","Cruisy Area,(HOT)","Hempstead","NY",1976,40.712071,-73.624797,"Cruising Areas","TRUE"
+"79",43523,"NY2893","Club Baths","(inquire locally)","","Baths","","Manhattan","NY",1970,40.723285,-73.988418,"Bath Houses","FALSE"
+"80",43549,"NY2919","Sebastian","(inquire locally)","","Restaurant","(R)","Manhattan","NY",1970,40.78306,-73.971249,"Restaurants","FALSE"
+"81",43575,"NY3026","Mystique","(moving soon-inquire locally for new address)","256 E 49th St.","Bars/Clubs","(P),(D),(PE),(*)","Manhattan","NY",1969,40.7542028,-73.9693662,"Bars","FALSE"
+"82",44554,"NY233","Subway Stations","","","Cruising Areas","(AYOR),Cruisy Area","Midtown","NY",1980,40.768687,-73.958443,"Cruising Areas","TRUE"
+"83",44575,"NY595","David All Male Cinema","(use lounge- AYOR)","28 W. 55th St.","Theatre","(AYOR)","Midtown","NY",1979,40.7621439,-73.976501,"Businesses","FALSE"
+"84",44618,"NY638","Subway Stations","","","Cruising Areas","Cruisy Area,(AYOR)","Midtown","NY",1979,40.768687,-73.958443,"Cruising Areas","TRUE"
+"85",44669,"NY997","Subway Stations","","","Cruising Areas","(AYOR),Cruisy Area","Midtown","NY",1978,40.768687,-73.958443,"Cruising Areas","TRUE"
+"86",44730,"NY1353","Manhattan Subway Stations","","","Cruising Areas","(AYOR),Cruisy Area","Midtown","NY",1977,40.768687,-73.958443,"Cruising Areas","TRUE"
+"87",49482,"NY2454","Fife & Drum","Inquire locally","","Bars/Clubs","","Plattsburg","NY",1973,44.696507,-73.454069,"Bars","FALSE"
+"88",49483,"NY2642","Fife & Drum","Inquire locally","","Bars/Clubs","","Plattsburg","NY",1972,44.696507,-73.454069,"Bars","FALSE"
+"89",50729,"NY304","'Vaseline Alley'","37th Rd. by foot or car","","Cruising Areas","Cruisy Area,(AYOR)","Queens","NY",1980,40.747118,-73.892407,"Cruising Areas","TRUE"
+"90",50732,"NY710","'Vaseline Alley'","37th Rd. by foot or car (HOT)","","Cruising Areas","Cruisy Area,(HOT)","Queens","NY",1979,40.747118,-73.892407,"Cruising Areas","TRUE"
+"91",50734,"NY1056","'Vaseline Alley'","37th Rd. by foot or car (HOT)","","Cruising Areas","Cruisy Area,(HOT)","Queens","NY",1978,40.747118,-73.892407,"Cruising Areas","TRUE"
+"92",50736,"NY1415","'Vaseline Alley'","37th Rd.- by car or foot (HOT)","","Cruising Areas","Cruisy Area,(HOT)","Queens","NY",1977,40.747118,-73.892407,"Cruising Areas","TRUE"
+"93",50738,"NY1945","'Vaseline Alley'","by car or foot 37th Rd. (HOT!)","","Cruising Areas","Cruisy Area,(HOT)","Queens","NY",1975,40.747118,-73.892407,"Cruising Areas","TRUE"
+"94",50740,"NY2228","'Vaseline Alley'","by car or walking- 37th Rd. (Hot!)","","Cruising Areas","Cruisy Area,(HOT)","Queens","NY",1974,40.747118,-73.892407,"Cruising Areas","TRUE"
+"95",51344,"NY338","Broad St. Bridge","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1980,43.154014,-77.609346,"Cruising Areas","TRUE"
+"96",51345,"NY339","Durand-Eastman Park","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1980,43.239327,-77.569,"Cruising Areas","TRUE"
+"97",51346,"NY340","Genesee Valley Park","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1980,43.239327,-77.569,"Cruising Areas","TRUE"
+"98",51347,"NY341","Washington Square Park","Court at Clinton","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1980,43.15345,-77.605307,"Cruising Areas","TRUE"
+"99",51362,"NY747","Broad St. Bridge","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1979,43.154014,-77.609346,"Cruising Areas","TRUE"
+"100",51363,"NY748","Durand-Eastman Park","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1979,43.239327,-77.569,"Cruising Areas","TRUE"
+"101",51364,"NY749","Genessee Valley Park","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1979,43.239327,-77.569,"Cruising Areas","TRUE"
+"102",51365,"NY750","Washington Square Park","Court at Clinton","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1979,43.15345,-77.605307,"Cruising Areas","TRUE"
+"103",51376,"NY1082","Broad St. Bridge","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1978,43.154014,-77.609346,"Cruising Areas","TRUE"
+"104",51377,"NY1083","Court & South Sts.","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1978,43.153594,-77.60783,"Cruising Areas","TRUE"
+"105",51378,"NY1084","Durand- Eastman Park","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1978,43.239327,-77.569,"Cruising Areas","TRUE"
+"106",51379,"NY1085","Genessee Valley Park","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1978,43.239327,-77.569,"Cruising Areas","TRUE"
+"107",51393,"NY1444","Broad St. Bridge","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1977,43.154014,-77.609346,"Cruising Areas","TRUE"
+"108",51394,"NY1445","Court & South Sts.","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1977,43.153594,-77.60783,"Cruising Areas","TRUE"
+"109",51395,"NY1446","Durand- Eastman Park","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1977,43.239327,-77.569,"Cruising Areas","TRUE"
+"110",51396,"NY1447","Genesee Valley Park","","","Cruising Areas","Cruisy Area,(HOT),(AYOR)","Rochester","NY",1977,43.239327,-77.569,"Cruising Areas","TRUE"
+"111",51411,"NY1682","Broad St. Bridge","(HOT)","","Cruising Areas","Cruisy Area,(HOT)","Rochester","NY",1976,43.154014,-77.609346,"Cruising Areas","TRUE"
+"112",51412,"NY1683","Court & South Sts.","(HOT)","","Cruising Areas","Cruisy Area,(HOT)","Rochester","NY",1976,43.153594,-77.60783,"Cruising Areas","TRUE"
+"113",51413,"NY1684","Durand- Eastman Park","(HOT)","","Cruising Areas","Cruisy Area,(HOT)","Rochester","NY",1976,43.239327,-77.569,"Cruising Areas","TRUE"
+"114",51414,"NY1685","Gennessee Valley Park","(HOT)","","Cruising Areas","Cruisy Area,(HOT)","Rochester","NY",1976,43.239327,-77.569,"Cruising Areas","TRUE"
+"115",51428,"NY1970","Broad St. Bridge","(HOT)","","Cruising Areas","Cruisy Area,(HOT)","Rochester","NY",1975,43.154014,-77.609346,"Cruising Areas","TRUE"
+"116",57228,"NY361","Jefferson-Clinton Hotel Bar","(Downstairs T-Room is AYOR) Jefferson & Clinton","","Bars/Clubs,Hotel","(M),(OC),(AYOR)","Syracuse","NY",1980,43.047289,-76.15385,"Accommodations","FALSE"
+"117",57238,"NY371","Columbus Circle","'Fuzz' posing as hustlers","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1980,43.046838,-76.149117,"Cruising Areas","TRUE"
+"118",57246,"NY766","Jefferson-Clinton Hotel Bar","(Downstairs T-Room is HOT-AYOR) Jefferson & Clinton","","Bars/Clubs,Hotel","(M),(OC),(H),(AYOR)","Syracuse","NY",1979,43.047289,-76.15385,"Accommodations","FALSE"
+"119",57251,"NY771","Columbus Circle","'Fuzz' posing as 'Hustlers'","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1979,43.046838,-76.149117,"Cruising Areas","TRUE"
+"120",57262,"NY1102","Columbus Circle","'Fuzz' posing as hustlers","","Cruising Areas","(AYOR),Cruisy Area","Syracuse","NY",1978,43.046838,-76.149117,"Cruising Areas","TRUE"
+"121",57274,"NY1464","Columbus Circle","'Fuzz' posing as hustlers","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1977,43.046838,-76.149117,"Cruising Areas","TRUE"
+"122",58393,"NY266","Central Park- Bethesda Fountain","","","Cruising Areas","(AYOR),Cruisy Area","Uptown","NY",1980,40.773823,-73.970818,"Cruising Areas","TRUE"
+"123",58435,"NY675","Central Park","Bethesda Fountain","","Cruising Areas","(AYOR),Cruisy Area","Uptown","NY",1979,40.773823,-73.970818,"Cruising Areas","TRUE"
+"124",58469,"NY1026","Central Park- Bethesda Fountain","","","Cruising Areas","Cruisy Area,(AYOR)","Uptown","NY",1978,40.773823,-73.970818,"Cruising Areas","TRUE"
+"125",58509,"NY1389","Central Park- Bethesda Fountain","(AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","Uptown","NY",1977,40.773823,-73.970818,"Cruising Areas","TRUE"
+"126",60933,"4117","'Vaseline Alley'","37th Rd. by foot or car","Mills Ave.","Cruising Areas","Cruisy Area,(AYOR)","New York","NY",1986,40.712775,-74.005973,"Cruising Areas","TRUE"
+"127",61198,"3916","Anvil","(Disco)","500 W. 14th Ave.","Bars/Clubs","(P),(D),(RT),(AYOR),(F&S)","New York","NY",1986,40.7421136,-74.0085052,"Bars","FALSE"
+"128",61893,"4082","Central Park","Bethesda Fountain & The Rambles- West side betw. 72nd & 96th Sts.","","Cruising Areas","Cruisy Area,(AYOR)","New York","NY",1986,40.78122,-73.966514,"Cruising Areas","TRUE"
+"129",63755,"3857","La Salle Park","","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1986,42.888675,-78.890913,"Cruising Areas","TRUE"
+"130",63800,"3819","Lark St.","nr. Washington Park","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1986,42.659254,-73.776606,"Cruising Areas","TRUE"
+"131",64999,"4056","Port Authority Bldg.","T-Room","","Cruising Areas","Cruisy Area,(AYOR)","New York","NY",1986,40.712775,-74.005973,"Cruising Areas","TRUE"
+"132",65681,"3820","State St.","nr. Washington Park","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1986,42.655854,-73.764203,"Cruising Areas","TRUE"
+"133",65747,"4057","Subway stations","","","Cruising Areas","Cruisy Area,(AYOR)","New York","NY",1986,40.712775,-74.005973,"Cruising Areas","TRUE"
+"134",65800,"4147","Syracuse U.","Maxwell Hall downstairs T-Room","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1986,43.038403,-76.136253,"Cruising Areas","TRUE"
+"135",66303,"4161","Valley View Park","off Utica Pkwy.","","Cruising Areas","Cruisy Area,(AYOR)","Tupper Lake","NY",1986,44.223949,-74.464057,"Cruising Areas","TRUE"
+"136",66396,"3824","Washington Park","by lake & tennis courts","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1986,42.658355,-73.772791,"Cruising Areas","TRUE"
+"137",66494,"3821","Willet St.","nr. Washington Park","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1986,42.65579,-73.766115,"Cruising Areas","TRUE"
+"138",66533,"3863","Woodlawn Beach","","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1986,42.789146,-78.851962,"Cruising Areas","TRUE"
+"139",70439,"3838","Lark","State & Willet Sts. nr. Washington Park","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1987,42.659254,-73.776606,"Cruising Areas","TRUE"
+"140",70443,"3842","Washington Park","by lake & tennis courts","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1987,42.658355,-73.772791,"Cruising Areas","TRUE"
+"141",70481,"3880","La Salle Park","","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1987,42.888675,-78.890913,"Cruising Areas","TRUE"
+"142",70486,"3885","Woodlawn Beach","Lakeshore Rd. ","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1987,42.789146,-78.851962,"Cruising Areas","TRUE"
+"143",70678,"4077","Port Authority Bldg. ","","","Cruising Areas","(AYOR),Cruisy Area","Midtown","NY",1987,40.754931,-73.984019,"Cruising Areas","TRUE"
+"144",70679,"4078","Subway stations","","","Cruising Areas","(AYOR),Cruisy Area","Midtown","NY",1987,40.768687,-73.958443,"Cruising Areas","TRUE"
+"145",70707,"4106","Central Park","Bethesda Fountain","","Cruising Areas","(AYOR),Cruisy Area","Uptown","NY",1987,40.773823,-73.970818,"Cruising Areas","TRUE"
+"146",70743,"4142","'Vaseline Alley'","37th Rd. by foot or car","","Cruising Areas","Cruisy Area,(AYOR)","Queens","NY",1987,40.747118,-73.892407,"Cruising Areas","TRUE"
+"147",70810,"4209","Syracuse U.","Maxwell Hall downstairs","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1987,43.038403,-76.136253,"Cruising Areas","TRUE"
+"148",70825,"4224","Valley View Park","off Utica Pkwy.","","Cruising Areas","(AYOR),Cruisy Area","Utica","NY",1987,43.079811,-75.234715,"Cruising Areas","TRUE"
+"149",76463,"3834","Lark","State & Willet Sts. nr. Washington Park","","Cruising Areas","(AYOR),Cruisy Area","Albany","NY",1988,42.659254,-73.776606,"Cruising Areas","TRUE"
+"150",76466,"3837","Washington Park","by lake & tennis courts","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1988,42.658355,-73.772791,"Cruising Areas","TRUE"
+"151",76504,"3875","La Salle Park","","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1988,42.888675,-78.890913,"Cruising Areas","TRUE"
+"152",76512,"3883","Woodlawn Beach","Lakeshore Rd.","","Cruising Areas","(AYOR),Cruisy Area","Buffalo","NY",1988,42.789146,-78.851962,"Cruising Areas","TRUE"
+"153",76557,"3929","Rumors","(Disco) (WE-hot) Exit 20 off Northway 87 to Rt. 149","","Bars/Clubs","(*),(D),(S),(V),(PT),(WE),(YC)","Lake George","NY",1988,43.426181,-73.712341,"Bars","FALSE"
+"154",76719,"4091","Port Authority Bldg.","","","Cruising Areas","(AYOR),Cruisy Area","Midtown","NY",1988,40.754931,-73.984019,"Cruising Areas","TRUE"
+"155",76720,"4092","Subway stations","","","Cruising Areas","(AYOR),Cruisy Area","Midtown","NY",1988,40.768687,-73.958443,"Cruising Areas","TRUE"
+"156",76746,"4118","Bethesda Fountain &
+The Rambles","West side betw. 72nd & 96th Sts.","","Cruising Areas","(AYOR),Cruisy Area","Uptown","NY",1988,40.762177,-73.966123,"Cruising Areas","TRUE"
+"157",76782,"4154","'Vaseline Alley'","37th Rd. by foot or car","","Cruising Areas","Cruisy Area,(AYOR)","Queens","NY",1988,40.747118,-73.892407,"Cruising Areas","TRUE"
+"158",76851,"4223","Syracuse U.","Maxwell Hall downstairs","","Cruising Areas","(AYOR),Cruisy Area","Syracuse","NY",1988,43.038403,-76.136253,"Cruising Areas","TRUE"
+"159",76867,"4239","Valley View Park","off Utica Pkwy.","","Cruising Areas","Cruisy Area,(AYOR)","Utica","NY",1988,43.079811,-75.234715,"Cruising Areas","TRUE"
+"160",82674,"3907","Lark, State, & Willet Sts. nr. Washington Park","","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1989,42.659254,-73.776606,"Cruising Areas","TRUE"
+"161",82676,"3909","Washington Park by lake & tennis courts","","","Cruising Areas","Cruisy Area,(AYOR)","Albany","NY",1989,42.658355,-73.772791,"Cruising Areas","TRUE"
+"162",82713,"3946","La Salle Park","","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1989,42.888675,-78.890913,"Cruising Areas","TRUE"
+"163",82717,"3950","Woodlawn Beach-Lakeshore Rd.","","","Cruising Areas","Cruisy Area,(AYOR)","Buffalo","NY",1989,42.789146,-78.851962,"Cruising Areas","TRUE"
+"164",82898,"4131","Grand Central Station","(Busy lu's but AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","New York","NY",1989,40.752714,-73.977227,"Cruising Areas","TRUE"
+"165",82899,"4132","Penn Station","(Busy lu's but AYOR)","","Cruising Areas","Cruisy Area,(AYOR)","New York","NY",1989,40.750568,-73.993519,"Cruising Areas","TRUE"
+"166",82900,"4133","Port Authority Bldg.","","","Cruising Areas","Cruisy Area,(AYOR)","New York","NY",1989,40.756752,-73.991704,"Cruising Areas","TRUE"
+"167",82918,"4151","Central Park","Bethesda Fountain","","Cruising Areas","Cruisy Area,(AYOR)","New York","NY",1989,40.774321,-73.970883,"Cruising Areas","TRUE"
+"168",82923,"4156","Bronx River Park btw. Glenn Rd. & Burke","","","Cruising Areas","Cruisy Area,(AYOR)","New York","NY",1989,40.712775,-74.005973,"Cruising Areas","TRUE"
+"169",82981,"4214","'Rest Stop' 490 W.","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1989,43.156578,-77.608846,"Cruising Areas","TRUE"
+"170",82982,"4215","Durand-Eastman Park","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1989,43.239327,-77.569,"Cruising Areas","TRUE"
+"171",82983,"4216","Genesee Valley Park","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1989,43.239327,-77.569,"Cruising Areas","TRUE"
+"172",82984,"4217","Manhattan Square Park","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1989,43.153475,-77.601744,"Cruising Areas","TRUE"
+"173",82985,"4218","Washington Square Park","","","Cruising Areas","Cruisy Area,(AYOR)","Rochester","NY",1989,43.15345,-77.605307,"Cruising Areas","TRUE"
+"174",83007,"4240","Syracuse U.","Maxwell Hall (dwnstrs.)","","Cruising Areas","Cruisy Area,(AYOR)","Syracuse","NY",1989,43.038403,-76.136253,"Cruising Areas","TRUE"
+"175",83022,"4255","Valley View Park off Utica Pkwy.","","","Cruising Areas","Cruisy Area,(AYOR)","Utica","NY",1989,43.079811,-75.234715,"Cruising Areas","TRUE"

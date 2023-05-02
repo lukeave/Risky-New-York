@@ -12,16 +12,12 @@ library(leaflet)
 library(leaftime)
 library(geojsonR)
 
-#load data from 1965 to 1985
-data(gayguides)
-gayguides1965to1985 <- gayguides
-rm(gayguides)
+#load data from 1965 to 1989
 
-#load data from 1986 to 1996
-gayguides1986 <- read.csv("~/Risky-New-York/gay guides data/gayguides1986.csv")
-gayguides1987 <- read.csv("~/Risky-New-York/gay guides data/gayguides1987.csv")
-gayguides1988 <- read.csv("~/Risky-New-York/gay guides data/gayguides1988.csv")
-gayguides1989 <- read.csv("~/Risky-New-York/gay guides data/gayguides1989.csv")
+gayguides1965to1989 <- read_rds("~/Risky-New-York/gay guides data/data.rds")
+
+
+#load gay guides data from 1990 to 1996
 gayguides1990 <- read.csv("~/Risky-New-York/gay guides data/gayguides1990.csv")
 gayguides1991 <- read.csv("~/Risky-New-York/gay guides data/gayguides1991.csv")
 gayguides1992 <- read.csv("~/Risky-New-York/gay guides data/gayguides1992.csv")
@@ -30,114 +26,95 @@ gayguides1994 <- read.csv("~/Risky-New-York/gay guides data/gayguides1994.csv")
 gayguides1995 <- read.csv("~/Risky-New-York/gay guides data/gayguides1995.csv")
 gayguides1996 <- read.csv("~/Risky-New-York/gay guides data/gayguides1996.csv")
 
-#delete column "X" in 1965-1985 data that does not exist in other data frames
-gayguides1965to1985 <- gayguides1965to1985[,-1]
+#combine all data frames from 1990 to 1996 into a single data frame
+gayguides1990to1996 <- rbind(gayguides1990, gayguides1991, gayguides1992, gayguides1993, gayguides1994, gayguides1995, gayguides1996)
+rm(gayguides1990)
+rm(gayguides1991)
+rm(gayguides1992)
+rm(gayguides1993)
+rm(gayguides1994)
+rm(gayguides1995)
+rm(gayguides1996)
 
-#change name of column 13 in 1965-1985 data to match column name in other data frames
-colnames(gayguides1965to1985)[13] <- "unclear_address"
+#delete all columns in 1990-1996 data that are irrelevant for analysis to ensure that data frames have the same variables throughout
+gayguides1990to1996 <- gayguides1990to1996[,-13]
+gayguides1990to1996 <- gayguides1990to1996[,-11]
 
-#delete all other columns in 1965-1985 data that are irrelevant for analysis to ensure that data frames have the same variables throughout
-gayguides1965to1985 <- gayguides1965to1985[,-11]
-gayguides1965to1985 <- gayguides1965to1985[,-10]
-gayguides1965to1985 <- gayguides1965to1985[,-10]
+#again, change name of column 1 in 1990-1996 data to ensure consistency across data frames
+colnames(gayguides1990to1996)[1] <- "ID"
 
-#combine all data frames from 1986 to 1996 into a single data frame
-gayguides1986to1996 <- rbind(gayguides1986, gayguides1987, gayguides1988, gayguides1989, gayguides1988, gayguides1989, gayguides1990, gayguides1991, gayguides1992, gayguides1993, gayguides1994, gayguides1995, gayguides1996)
+#use the unclear_address and streetaddress columns in 1990-1996 to filter out unclear entries
+gayguides1990to1996 <- gayguides1990to1996 %>% 
+  filter(unclear_address != "checked") %>% 
+  filter(streetaddress != "")
+  
+#now that unclear addresses are filtered out, remove unclear_address column in 1990-1996
+gayguides1990to1996 <- gayguides1990to1996[,-10]
 
-#delete all columns in 1986-1996 data that are irrelevant for analysis to ensure that data frames have the same variables throughout
-gayguides1986to1996 <- gayguides1986to1996[,-13]
-gayguides1986to1996 <- gayguides1986to1996[,-11]
-gayguides1986to1996 <- gayguides1986to1996[,-10]
-
-#again, change name of column 1 in 1986-1996 data to ensure consistency across data frames
-colnames(gayguides1986to1996)[1] <- "ID"
-
-#combine 1965-1985 with 1986-1996
-gayguides.complete <- rbind(gayguides1986to1996, gayguides1965to1985) %>% 
-  na.exclude()
-
-#count types
-type.count <- gayguides.complete %>% 
-  group_by(type) %>% 
-  summarize(count = n())
-
-#keep a copy of the 1965-1985 gay guides data that was previously geocoded for potential exploratory analysis.
-data("gayguides")
-geocoded.gg.1965to1985 <- gayguides
-rm(gayguides)
-
-#subset data to NY locations only
-gaynewyork <- gayguides.complete %>% 
-  filter(state == "NY")
-
-geo.gaynewyork <- gaynewyork %>% 
-  mutate_if(is.character, trimws)
+#before merging data sets, geocode 1990-1996
+library(tidyverse)
+library(ggmap)
 
 # paste together the street address, city and state in order to ensure we use full addresses for geocoding. Will minimize mistakes caused by common streetnames. 
-geo.gaynewyork$full.address <- paste(gaynewyork$streetaddress, ", ", gaynewyork$city, ", ", gaynewyork$state, sep="") 
-
-geo.gaynewyork <- geo.gaynewyork %>% 
-  filter(unclear_address != "checked" | unclear_address != "Location could not be verified. General coordinates used")
+gayguides1990to1996$full.address <- paste(gayguides1990to1996$streetaddress, ", ", gayguides1990to1996$city, ", ", gayguides1990to1996$state, sep="") 
 
 # Register the google api code for the georeferencing service.
 register_google(key = Sys.getenv("MGG_GOOGLE_KEY"))
 
 # Loop through the addresses to get the latitude and longitude of each address and add it to the origAddress data frame in new columns lat and lon
-for(i in 1:nrow(geo.gaynewyork)) {
+for(i in 1:nrow(gayguides1990to1996)) {
   # Print("Working...")
-  result <- tryCatch(geocode(geo.gaynewyork$full.address[i], output = "latlona", source = "google"), warning = function(w) data.frame(lon = NA, lat = NA, address = NA))
-  geo.gaynewyork$lon[i] <- as.numeric(result[1])
-  geo.gaynewyork$lat[i] <- as.numeric(result[2])
-  geo.gaynewyork$geoAddress[i] <- as.character(result[3])
+  result <- tryCatch(geocode(gayguides1990to1996$full.address[i], output = "latlona", source = "google"), warning = function(w) data.frame(lon = NA, lat = NA, address = NA))
+  gayguides1990to1996$lon[i] <- as.numeric(result[1])
+  gayguides1990to1996$lat[i] <- as.numeric(result[2])
+  gayguides1990to1996$geoAddress[i] <- as.character(result[3])
 }
 
-write.csv(geo.gaynewyork, file = "geo.gaynewyork.csv")
+rm(result)
+rm(i)
 
-#get NY counties
-state.newyork.map <- map_data('county', region = "new york")
+#save geocoded 1990-1996 data as a csv and look for off coordinates (just a check)
+write.csv(gayguides1990to1996, file = "gayguides1990to1996.csv")
 
-nyc.counties <- state.newyork.map %>% 
-  filter(subregion == "queens" | subregion == "bronx" | subregion == "richmond" | subregion == "kings" | subregion == "new york")
+#remove NAs from 1990-1996
+gayguides1990to1996 <- gayguides1990to1996 %>% 
+  filter(geoAddress != "NA")
 
-ggplot() +
-  geom_map(data = state.newyork.map, map = state.newyork.map, aes(x = long, y = lat, map_id= region), fill = "pink", linewidth = 0.5, color="black") #+
-  geom_point(data = geo.gaynewyork, aes(x=longitude, y=latitude), size = 3, shape = 23, fill = "orange")
+#change class of lat column in 1965-1989 data to numeric - for some reason it is character, and it has an entry with a character value
+gayguides1965to1989$lat <- as.numeric(gayguides1965to1989$lat)
 
+#remove NAs from 1965-1989
+gayguides1965to1989 <- gayguides1965to1989 %>% 
+  na.exclude()
 
-#replace empty strings with NAs
-gaynewyork[gaynewyork == ''] <- NA
+#remove column full.address and column geoAddress in 1990-1996
+gayguides1990to1996 <- gayguides1990to1996[,-14]
+gayguides1990to1996 <- gayguides1990to1996[,-11]
 
-##prepare new york types for analysis
-#check existing NA types. result: 17 rows
-gaynewyork %>% 
-  filter(is.na(type)) %>% 
-  head()
+#combine 1965-1989 with 1990-1996
+gayguides.complete <- rbind(gayguides1965to1989, gayguides1990to1996)
+#remove notes column - will not use for analysis
+gayguides.complete <- gayguides.complete[, -10]
 
-#account for typos in NY types
-gaynewyork <- gaynewyork %>% mutate(type = fct_collapse(type, "Accommodations" = c("Accommodations", "Accomodations")))
+write.csv(gayguides.complete, file = "gayguides.complete.csv")
 
-gaynewyork <- gaynewyork %>% mutate(type = fct_collapse(type, "Organizations" = c("Organization", "Organizations")))
+rm(gayguides1965to1989)
+rm(gayguides1990to1996)
 
-gaynewyork <- gaynewyork %>% mutate(type = fct_collapse(type, "Religious Institutions" = c("Religious Institution", "Religious Organizations", "Religious Organization")))
-
-#count unique NY types
-newyork.types <- gaynewyork %>% 
+#count types
+types.count <- gayguides.complete %>% 
   group_by(type) %>% 
   summarize(count = n())
 
-#exclude NA types from count
-newyork.types <- newyork.types %>% na.exclude()
+#account for typos in types
+types.count <- types.count %>% mutate(type = fct_collapse(type, "Accommodations" = c("Accommodations", "Accomodations")))
 
-#create a new column to denote cruisy for each location in NY
-gaynewyork <- gaynewyork %>%
-  mutate(cruisy = ifelse(grepl('cruis', description), "TRUE",
-                         ifelse(grepl('Cruis', description), "TRUE", 
-                                ifelse(grepl('Cruis', amenityfeatures), "TRUE",
-                                       ifelse(grepl('Cruis', type), "TRUE", "FALSE")))))
+types.count <- types.count %>% mutate(type = fct_collapse(type, "Organizations" = c("Organization", "Organizations")))
 
-#subset the NY data to those locations that were assigned a risk factor
-risky.newyork <- gaynewyork %>% 
-  filter(grepl('AYOR', amenityfeatures) | grepl('HOT', amenityfeatures) | grepl('locally', description) | grepl('HOT!', description) | grepl('hot)', description))
+types.count <- types.count %>% mutate(type = fct_collapse(type, "Religious Institutions" = c("Religious Institution", "Religious Organizations", "Religious Organization")))
+
+
+write.csv(types.count, file = "~/Risky-New-York/gay guides data/types.count.csv")
 
 ##Hierarchy of Analytic Categories
 ## 1. Religious Institutions
@@ -162,39 +139,111 @@ risky.newyork <- gaynewyork %>%
 ## 9. Cruising Areas
 ### 9.1. Cruisy + Cruising
 
-#based on the new hierarchy of types, collapse types into analytic categories
-newyork.types$categories <- ifelse(grepl('Religious', newyork.types$type), "Religious Institutions",
-                                   ifelse(grepl('Hotel', newyork.types$type), "Accommodations",
-                                          ifelse(grepl('Accommodation', newyork.types$type), "Accommodations",
-                                                 ifelse(grepl('Bar', newyork.types$type), "Bars",
-                                                        ifelse(grepl('Restaurant', newyork.types$type), "Restaurants",
-                                                               ifelse(grepl('Cafe', newyork.types$type), "Restaurants",
-                                                                      ifelse(grepl('Gym', newyork.types$type), "Gyms",
-                                                                             ifelse(grepl('Health', newyork.types$type), "Gyms",
-                                                                                    ifelse(grepl('Bath', newyork.types$type), "Bath Houses",
-                                                                                           ifelse(grepl('Business', newyork.types$type), "Businesses",
-                                                                                                  ifelse(grepl('Travel', newyork.types$type), "Businesses",
-                                                                                                         ifelse(grepl('Tour', newyork.types$type), "Businesses",
-                                                                                                                ifelse(grepl('Shop', newyork.types$type), "Businesses",
-                                                                                                                       ifelse(grepl('Erotica', newyork.types$type), "Businesses",
-                                                                                                                              ifelse(grepl('Book', newyork.types$type), "Businesses",
-                                                                                                                                     ifelse(grepl('Theat', newyork.types$type), "Businesses",
-                                                                                                                                            ifelse(grepl('Service', newyork.types$type), "Businesses",
-                                                                                                                                                   ifelse(grepl('Community', newyork.types$type), "Organizations",
-                                                                                                                                                          ifelse(grepl('Publication', newyork.types$type), "Organizations",
-                                                                                                                                                                 ifelse(grepl('Hotline', newyork.types$type), "Organizations",
-                                                                                                                                                                        ifelse(grepl('Men', newyork.types$type), "Organizations",
-                                                                                                                                                                               ifelse(grepl('Cruis', newyork.types$type), "Cruising Areas", "NA"))))))))))))))))))))))
-#add full address column to gayguides.complete
-gayguides.complete$full.address <- 
-  paste(gayguides.complete$streetaddress,  gayguides.complete$city, gayguides.complete$state, sep=", ")
-#geocode subset of gay guides data to 1965 to 1970 (first visualization)
-##output is stored as gayguides.1965to1970.csv
-gayguides.1965to1970 <- gayguides.complete %>% 
-filter(state != 'VI' & state != 'PR' & state != 'GU' & state != 'HI') %>%
-filter(Year >= 1965 & Year <=1970) %>% 
-filter(unclear_address != "checked") %>% 
-geocode(address = full.address, method='osm', lat = latitude, long = longitude)
+#based on the new hierarchy of types, collapse types into analytic categories in gayguides.complete. test it out before in types.count
+
+##test in the types.count data:
+types.count$categories <- ifelse(grepl('Religious', types.count$type), "Religious Institutions",
+                                 ifelse(grepl('Hotel', types.count$type), "Accommodations",
+                                        ifelse(grepl('Accommodation', types.count$type), "Accommodations",
+                                               ifelse(grepl('Bar', types.count$type), "Bars",
+                                                      ifelse(grepl('Restaurant', types.count$type), "Restaurants",
+                                                             ifelse(grepl('Cafe', types.count$type), "Restaurants",
+                                                                    ifelse(grepl('Gym', types.count$type), "Gyms",
+                                                                           ifelse(grepl('Health', types.count$type), "Gyms",
+                                                                                  ifelse(grepl('Bath', types.count$type), "Bath Houses",
+                                                                                         ifelse(grepl('Business', types.count$type), "Businesses",
+                                                                                                ifelse(grepl('Travel', types.count$type), "Businesses",
+                                                                                                       ifelse(grepl('Tour', types.count$type), "Businesses",
+                                                                                                              ifelse(grepl('Shop', types.count$type), "Businesses",
+                                                                                                                     ifelse(grepl('Erotica', types.count$type), "Businesses",
+                                                                                                                            ifelse(grepl('Book', types.count$type), "Businesses",
+                                                                                                                                   ifelse(grepl('Theat', types.count$type), "Businesses",
+                                                                                                                                          ifelse(grepl('Service', types.count$type), "Businesses",
+                                                                                                                                                 ifelse(grepl('Community', types.count$type), "Organizations",
+                                                                                                                                                        ifelse(grepl('Publication', types.count$type), "Organizations",
+                                                                                                                                                               ifelse(grepl('Hotline', types.count$type), "Organizations",
+                                                                                                                                                                      ifelse(grepl('Men', types.count$type), "Organizations",
+                                                                                                                                                                             ifelse(grepl('Organization', types.count$type), "Organizations",
+                                                                                                                                                                                    ifelse(grepl('Cruis', types.count$type), "Cruising Areas", "NA")))))))))))))))))))))))
+
+##NAs refer simply to 1 campground, a few "for review" and a few empty types. remove all
+types.count <- types.count %>% 
+  filter(categories != "NA")
+
+##now collapse types in gayguides.complete
+gayguides.complete$categories <- ifelse(grepl('Religious', gayguides.complete$type), "Religious Institutions",
+                                 ifelse(grepl('Hotel', gayguides.complete$type), "Accommodations",
+                                        ifelse(grepl('Accommodation', gayguides.complete$type), "Accommodations",
+                                               ifelse(grepl('Bar', gayguides.complete$type), "Bars",
+                                                      ifelse(grepl('Restaurant', gayguides.complete$type), "Restaurants",
+                                                             ifelse(grepl('Cafe', gayguides.complete$type), "Restaurants",
+                                                                    ifelse(grepl('Gym', gayguides.complete$type), "Gyms",
+                                                                           ifelse(grepl('Health', gayguides.complete$type), "Gyms",
+                                                                                  ifelse(grepl('Bath', gayguides.complete$type), "Bath Houses",
+                                                                                         ifelse(grepl('Business', gayguides.complete$type), "Businesses",
+                                                                                                ifelse(grepl('Travel', gayguides.complete$type), "Businesses",
+                                                                                                       ifelse(grepl('Tour', gayguides.complete$type), "Businesses",
+                                                                                                              ifelse(grepl('Shop', gayguides.complete$type), "Businesses",
+                                                                                                                     ifelse(grepl('Erotica', gayguides.complete$type), "Businesses",
+                                                                                                                            ifelse(grepl('Book', gayguides.complete$type), "Businesses",
+                                                                                                                                   ifelse(grepl('Theat', gayguides.complete$type), "Businesses",
+                                                                                                                                          ifelse(grepl('Service', gayguides.complete$type), "Businesses",
+                                                                                                                                                 ifelse(grepl('Community', gayguides.complete$type), "Organizations",
+                                                                                                                                                        ifelse(grepl('Publication', gayguides.complete$type), "Organizations",
+                                                                                                                                                               ifelse(grepl('Hotline', gayguides.complete$type), "Organizations",
+                                                                                                                                                                      ifelse(grepl('Men', gayguides.complete$type), "Organizations",
+                                                                                                                                                                             ifelse(grepl('Organization', gayguides.complete$type), "Organizations",
+                                                                                                                                                                                    ifelse(grepl('Cruis', gayguides.complete$type), "Cruising Areas", "NA")))))))))))))))))))))))
+##remove NAs from gayguides.complete$categories
+gayguides.complete <- gayguides.complete %>% 
+  filter(categories != "NA")
+
+#create a new column to denote "cruisy" factor for each location in gayguides.complete. 
+#this can enable analysis of correlation between risk and cruising areas.
+
+##cruisy gayguides.complete
+gayguides.complete <- gayguides.complete %>%
+  mutate(cruisy = ifelse(grepl('cruis', description), "TRUE",
+                         ifelse(grepl('Cruis', description), "TRUE", 
+                                ifelse(grepl('Cruis', amenityfeatures), "TRUE",
+                                       ifelse(grepl('Cruis', type), "TRUE", "FALSE")))))
+
+
+###NEW YORK 
+
+#subset data to NY locations only
+gaynewyork <- gayguides.complete %>% 
+  filter(state == "NY")
+
+#get NY counties
+state.newyork.map <- map_data('county', region = "new york")
+
+nyc.counties.map <- state.newyork.map %>% 
+  filter(subregion == "queens" | subregion == "bronx" | subregion == "richmond" | subregion == "kings" | subregion == "new york")
+
+#THIS WON'T STAY HERE - IT GOES IN THE RMD FILE
+ggplot() +
+  geom_map(data = state.newyork.map, map = state.newyork.map, aes(x = long, y = lat, map_id= region), fill = "pink", linewidth = 0.5, color="black") +
+  geom_point(data = gaynewyork, aes(x=lon, y=lat), size = 3, shape = 23, fill = "orange")
+
+
+#count unique NY analytic categories (new collapsed types)
+newyork.types.count <- gaynewyork %>% 
+  group_by(categories) %>% 
+  summarize(count = n())
+
+#subset the NY data to those locations that were assigned a risk factor
+risky.newyork <- gaynewyork %>% 
+  filter(grepl('AYOR', amenityfeatures) | grepl('HOT', amenityfeatures) | grepl('locally', description) | grepl('HOT!', description) | grepl('hot)', description))
+
+write.csv(risky.newyork, file = "~/Risky-New-York/gay guides data/risky.newyork.csv")
+
+#for the first visualization, filter gayguides.complete data to 1965-1970
+##remove US territories from visualization
+#vis.gg.1965to1970 <- gayguides.complete %>% 
+#filter(state != 'VI' & state != 'PR' & state != 'GU' & state != 'HI') %>%
+#filter(Year >= 1965 & Year <=1970)
+
 
 #subset gaynewyork to visualize the different categorizations of the Ramrod Bar over time
 ramrod.vis <- gaynewyork %>% 

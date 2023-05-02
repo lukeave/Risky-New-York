@@ -40,29 +40,47 @@ It was in the 1960s that those locations started to be integrated into the gay c
 
 ```{r}
 usamap <- map_data("state")
+gayguides.complete <- read.csv("~/Risky-New-York/gay guides data/gayguides.complete.csv")
 
-gayguides.1965to1970 <- read.csv("~/Risky-New-York/gay guides data/gayguides.1965to1970.csv")
+#filter gayguides.complete data to 1965-1970
+#filter out US territories from visualization
+vis.gg.1965to1970 <- gayguides.complete %>% 
+filter(state != 'VI' & state != 'PR' & state != 'GU' & state != 'HI') %>%
+filter(Year >= 1965 & Year <=1970)
 
 ggplot() + 
   geom_map(data = usamap, map = usamap, aes(long, lat, map_id=region), fill = "pink", linewidth = 0.5, colour = "black") +
-  geom_point(data = gayguides.1965to1970, mapping = aes(x=longitude, y=latitude), colour = "blue") + labs(title = "Gay locations between 1965 and 1970 in the Contiguous United States") +
+  geom_point(data = vis.gg.1965to1970, mapping = aes(x=lon, y=lat), colour = "blue") + labs(title = "Gay locations between 1965 and 1970 in the Contiguous United States") +
   xlim(-125, -65) +
   ylim(20, 50)
 ```
+
 Damron's Address Books incorporated multiple signals for categorizing gay locations according to social function, sociability, safety, and popularity. The "Explanation of Listings" page -- which became the "Key to Listing Codes" page in 1990 -- provided readers with descriptive categories that indicated the types of locations and which groups frequented each place. Some categories like "HOT" and "AYOR" (At Your Own Risk) also denoted danger, policing, frequent arrests, or risk of violent encounters with non-queer groups. As the graph below demonstrates, over the years, the risk factor varied according to larger social and political trends related to gay life and culture. The overall increase in danger and risk categories in the guides through the second half of the century is particularly insightful when considering Chauncey's interpretation of the suppression of the gay world and growing state vigilance and control over homosexual existence. Further, in the late 1980s, the AIDS crisis aligned with an apocalyptic view of the future and military metaphors around AIDS across the United States reinforced gay men's necessity of living underground and segregated from the normative city.[^7]
 
 ```{r}
-risky.newyork <- read.csv("~/Risky-New-York/gay guides data/risky.newyork.csv")
+risky.newyork.count <- read.csv("~/Risky-New-York/gay guides data/risky.newyork.count.csv")
 
-risky.newyork %>% group_by(Year) %>%
-  summarise(count = n()) %>% 
-  ggplot(aes(x = Year, y = count)) +
-  geom_line() + labs(title = 'Risk factor in gay New York City over the years', x = 'Year', y = 'Risky Locations')
+risky.newyork.count %>%
+  ggplot(aes(x = Year, y = relative.risk)) +
+  geom_line() + labs(title = 'Risk factor in gay New York City over the years', x = 'Year', y = 'Percentage of Risky Locations')
 ```
+
 On November 19, 1980, former transit police officer Ronald Crumpley opened fire with an automatic weapon in front of the Ramrod Bar on West Street in Manhattan. In midst of the political and epidemic discourse of demonization of gay men, the shooting was both a physical and symbolic attack against the community and its uses of public spaces within the normative city and the urban landscape. Damron's Guides had incorporated the Ramrod Bar since 1974 up until 1983, a couple years after the attack. In 1982, Damron removed the code "FFA" from the description of Ramrod Bar and directly addressed the attack by adding "Tragic shooting" in the description of the location. Scholars have previously contended that the FFA code, described as "Final Faith of America, or ask your friendly SM serviceman" in the Address Books could be implicitly referring to the group ‘Fist Fuckers of America,’ a group associated with the BDSM subculture of the time. The group allegedly met at the gay club Mineshaft, also located in New York.[^8]
 
 ```{r}
-ramrod.vis <- read.csv("~/Risky-New-York/gay guides data/ramrod.bar.categories.csv") 
+#subset gaynewyork to visualize the different categorizations of the Ramrod Bar over time
+gayguides.complete <- read.csv("~/Risky-New-York/gay guides data/gayguides.complete.csv")
+#subset data to NY locations only
+gaynewyork <- gayguides.complete %>% 
+  filter(state == "NY")
+
+ramrod.vis <- gaynewyork %>% 
+  filter(grepl('394 West', streetaddress)) %>% 
+  select(description, Year, amenityfeatures) %>% 
+  na.exclude()
+
+ramrod.vis <- ramrod.vis[, c(2, 3, 1)]
+
 ramrod.vis <- ramrod.vis %>% 
   select(Year, amenityfeatures, description) %>% 
   group_by(Year)
@@ -78,12 +96,12 @@ Although risky locations are commonly associated with cruising areas, Risky New 
 Tha gayguides data was originally divided in two large data sets. The 1965-1985 data set has been uploaded to the project's website and is constantly updated and made publicly available through an interactive leaflet map application. If the user filtered the map to show only locations that existed in the state of New York in 1980, for example, this is how it would look like:
 
 ```{r}
-geocoded.gg.1965to1985 <- read.csv("~/Risky-New-York/gay guides data/geocoded.gg.1965to1985.csv")
+gayguides.complete <- read.csv("~/Risky-New-York/gay guides data/gayguides.complete.csv")
 
-geocoded.nyc.1980 <- geocoded.gg.1965to1985 %>% 
+gg.nyc.1980 <- gayguides.complete %>% 
   filter(state == "NY" & Year == 1980)
 
-leaflet(data=geocoded.nyc.1980) %>% addTiles() %>% addMarkers(~lon, ~lat, popup = paste("Location Name:", geocoded.nyc.1980$title, ", ", "Type:", geocoded.nyc.1980$type))
+leaflet(data=gg.nyc.1980) %>% addTiles() %>% addMarkers(~lon, ~lat, popup = paste("Location Name:", gg.nyc.1980$title, ", ", "Type:", gg.nyc.1980$type))
 ```
 
 
