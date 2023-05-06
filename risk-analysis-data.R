@@ -27,7 +27,6 @@ rm(gayguides1994)
 rm(gayguides1995)
 rm(gayguides1996)
 
-
 #select  columns that matter in 1965-1989
 gayguides1965to1989 <- gayguides1965to1989 %>% 
   select(title, description, type, amenityfeatures, city, state, Year)
@@ -38,3 +37,35 @@ gayguides1990to1996 <- gayguides1990to1996 %>%
 
 #merge data sets
 prerisk.data <- rbind(gayguides1965to1989, gayguides1990to1996)
+
+#subset data to New York
+total.nylocations <- prerisk.data %>% 
+  group_by(Year) %>% 
+  summarize(count = n())
+
+#filter data for risk factor
+total.nyrisky <- prerisk.data %>% 
+  filter(state == "NY") %>% 
+  filter(grepl('AYOR', amenityfeatures) | grepl('HOT', amenityfeatures) | grepl('locally', description) | grepl('HOT!', description) | grepl('hot)', description)) %>% 
+  group_by(Year) %>% 
+  summarize(count = n())
+
+#join data sets
+risky.newyork.count <- full_join(total.nylocations, total.nyrisky, by = "Year")
+
+colnames(risky.newyork.count)[2] <- "total.count"
+colnames(risky.newyork.count)[3] <- "risky.count"
+
+#create a subset of the data "risky.newyork" that is geocoded
+risky.newyork <- gaynewyork %>% 
+  filter(grepl('AYOR', amenityfeatures) | grepl('HOT', amenityfeatures) | grepl('locally', description) | grepl('HOT!', description) | grepl('hot)', description))
+
+write.csv(risky.newyork, file = "~/Risky-New-York/gay guides data/risky.newyork.csv")
+
+#make sure the "cruisy" column added to gayguides.complete also exist in risky.newyork
+risky.newyork <- gayguides.complete %>%
+  mutate(cruisy = ifelse(grepl('cruis', description), "TRUE",
+                         ifelse(grepl('Cruis', description), "TRUE", 
+                                ifelse(grepl('Cruis', amenityfeatures), "TRUE",
+                                       ifelse(grepl('Cruis', type), "TRUE", "FALSE")))))
+
