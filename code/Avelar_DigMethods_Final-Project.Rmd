@@ -26,7 +26,7 @@ The study of historically marginalized groups and their presence in, movement th
 
 Early-twentieth-century gay men did not passively internalize and accept the dominant cultural perspective on their sexuality and identities, nor were they invisible figures in thriving urban landscapes like New York, Minneapolis, and Boston. The shift started in the 1930s and it was all but immediate. New waves of anti-gay policing and legislation forced gay people to gradually hide their complex social network from the eyes of outsiders. Arrest numbers of gay men in New York City during the 1930s for engaging with gay life in the public sphere skyrocketed. Gradually yet violently, the gay city was suppressed back into the shadows of the normative city. But as Chauncey insists, despite the forceful discretion and increased state censorship and control over homosexual life over the 1940s and 1950s, the gay world "continued to thrive and became even more extensive."[^2] 
 
-The Gay New York City in the second half of the twentieth century was a stubborn response to the risks of Normative New York - the heteronormative cultural topography and sexual regime established during and after the Second World War. In this short article, I use methodologies of data exploratory analysis to examine the available data from the <i>Mapping the Gay Guides</i> project and visualize how the suppressed gay landscape in New York City thrived as a result of, among other factors, non-conforming spatial practices and appropriation of public spaces of the normative city by gay men. In the public sphere, particular locales became associated with gay culture and resistance to <i>status quo</i> by being categorized as dangerous and risky for gay men. 
+The Gay New York City in the second half of the twentieth century was a stubborn response to the risks of Normative New York - the heteronormative cultural topography and sexual regime established during and after the Second World War. In the public sphere, particular locales became associated with gay culture and resistance to <i>status quo</i> by being categorized as dangerous and risky for gay men. In this short reflection, I use methodologies of data exploratory analysis to examine the available data from the <i>Mapping the Gay Guides</i> project and visualize potential correlation between the suppressed gay landscape in New York City and appropriation of "risky" public spaces of the normative city by gay men.
 
 <h3> A Shared Sense of Place </h3>
 
@@ -56,6 +56,8 @@ ggplot() +
 ```
 
 Damron's Address Books incorporated multiple signals for categorizing gay locations according to social function, sociability, safety, and popularity. The "Explanation of Listings" page -- which became the "Key to Listing Codes" page in 1990 -- provided readers with descriptive categories that indicated the types of locations and which groups frequented each place. Some categories like "HOT" and "AYOR" (At Your Own Risk) also denoted danger, policing, frequent arrests, or risk of violent encounters with non-queer groups. Over the years, the risk factor varied according to larger social and political trends related to gay life and culture. 
+
+<h3> Where is danger? <h3/>
 
 The graph below shows the relative count of risky locations per year in relation to the total number of locations in New York City. The overall increase in danger and risk categories in the guides through the second half of the century is particularly insightful when we consider Chauncey's interpretation of the suppression of the gay world and growing state vigilance and control over homosexual existence. The relative risk in NYC grew exponentially between 1974 and 1976, and remained somewhat stable between 4% and 3% of total locations during the 1980s. By the end of the decade, a new peak is noticeable associated with the AIDS crisis aligned with an apocalyptic view of the future and military metaphors around AIDS across the United States reinforced gay men's necessity of living underground and segregated from the normative city.[^7] In 1993, the highest risk peak occurs. An educated guess may indicate correlation between the classification of locations as dangerous in the Guides and the World Trade Center Bombing that happened in February of that same year -- but further research is needed to confirm this hypothesis.
 
@@ -97,15 +99,15 @@ Although risky locations are commonly associated with cruising areas, Risky New 
 
 <h4> Step 1: Formulate the question </h4>
 
-Tha Gay Guides data I worked with was originally divided in two large data sets. The 1965-1989 data set has been uploaded to the project's GitHub repository and is constantly updated and made publicly available for reproducibility.[^9] The 1990-1996 data is not publicly availabe yet. Rather, it has been managed in AirTable bases to which locations from Damron's Guides are transcribed and later geolocated. 
+The Gay Guides data I worked with was originally divided in two large data sets. The 1965-1989 data set has been uploaded to the project's GitHub repository and is constantly updated and made publicly available for reproducibility.[^9] The 1990-1996 data is not publicly available yet. Rather, it has been managed in AirTable bases to which locations from Damron's Guides are transcribed and later geolocated. 
 
 Because of how the 1990-1996 data is incomplete its integrity is yet to be assessed, this examination is limited in terms of quantitative and spatial analyses. The totality of the data from 1965 to 1996, however, still enables important qualitative analysis regarding location types, amenity features, and change/continuity in the gay world over time. So my questions were: what kinds of locations were assigned a description, amenity feature, ot type that indicated risk or danger to gay men in New York between 1965 and 1996? How does the risk factor change over time in those locations? Assuming that relative risk increases over time (due to many social, political, and economic reasons), are there spatial correlations to be found between risk and public city spaces in New York?
 
-<h3> Step 2: Read in and clean up the data <h3/>
+<h4> Step 2: Read in and clean up the data <h4/>
 
 To grasp with the nuances of such a large data set I had to make some methodological decisions. First, since each year between 1990 and 1996 had its own csv file, I merged them all into one data frame. I deleted variables that were not relevant for analysis. Second, knowing that spatial analysis would be unsustainable with the unclear addresses and potential data errors between 1990 and 1996, I chose to delete all locations marked as "unclear address" or with empty street addresses. Then, I was able to geocode the 1990-1996 data. I also deleted NA values in both 1965-1989 and 1990-1996 data sets. Finally, with identical variables across both data frames, I merged them into a single data file.
 
-<h3> Step 3: Check (and count) your "n"s <h3/>
+<h4> Step 3: Check (and count) your "n"s <h4/>
 
 The merged data had a total of 102.212 observations and 12 variables. The first variable I was interested in running an overall count was "types." Until 1989, Damron only assigned codes to locations -- what the MGG research team refers to as amenity features. Types, however, were added as an analytic categories during data transcription. Starting in the 1990s, Gina Gatta organized the locations by city under pre-defined types. In the merged data set, the type column had 340 unique values, and a subset of the data including only New York locations had 114 unique type values. I realized that if I wanted to examine the types of risky locations in New York, I had to make another methodological choice of creating new analytic categories that could overcome the divergent typification strategies across 31 years of data.
 
@@ -137,66 +139,73 @@ Old Category 8.4. Men's Club
 New Category 9. Cruising Areas
 Old Category 9.1. Cruisy + Cruising
 
-<h3> Step 4: Try easy answers first <h3/>
+<h4> Step 4: Try easy answers first <h4/>
 
 I then created a separate data frame with the count for each analytic category per year for the entire country. I did the same for the subset data containing only NY locations. After removing the NAs, if any, I could use the output data frame to plot the results of the simplest question I could ask: what types of gay locations were there in New York, and how many of each type?
 
 ```{r}
+ny.categories.count <- read.csv("~/Risky-New-York/gay guides data/ny.categories.count.csv")
+
 ggplot(ny.categories.count, aes(fill=categories, y=count, x=Year)) + 
     geom_bar(position="stack", stat="identity") +
     labs(title = "Types of gay locations in New York (1965-1996)")
 ```
-Now, where were these locations and how were they spread over the city landscape? For this question, let's use three years as data samples: 1970, 1980, and 1990.
+
+Now, which of these locations were assigned a risk factor?
 
 ```{r}
-gaynewyork <- gaynewyork %>% 
-  mutate(color = ifelse(gaynewyork$categories == "Accommodations", "orange",
-                        ifelse(gaynewyork$categories == "Bars", "red",
-                               ifelse(gaynewyork$categories == "Bath Houses", "green",
-                                      ifelse(gaynewyork$categories == "Businesses", "blue",
-                                             ifelse(gaynewyork$categories == "Cruising Areas", "brown",
-                                                    ifelse(gaynewyork$categories == "Gyms", "purple",
-                                                           ifelse(gaynewyork$categories == "Organizations", "yellow",
-                                                                  ifelse(gaynewyork$categories == "Religious Institutions", "darkcyan",
-                                                                         ifelse(gaynewyork$categories == "Restaurants", "royalblue", "grey"))))))))))
+library(streamgraph)
 
-pal <- colorFactor(palette = "RdGy", domain = nyc.1970$categories)
+risky.newyork <- read.csv("~/Risky-New-York/gay guides data/risky.newyork.csv")
 
+df <- risky.newyork %>% 
+  group_by(categories, Year) %>% 
+  summarize(count = n())
+
+df <- df %>%
+  group_by(Year, categories) %>%
+  summarise(n = sum(count)) %>%
+  mutate(percentage = n / sum(n))
+
+ggplot(df, aes(fill=categories, y=percentage, x=Year)) + 
+    geom_bar(position="stack", stat="identity") +
+  labs(title = "Types of risky locations in New York (1965-1996)")
+```
+The prominence of cruising areas as locations of risk, on a first glance, may not tell us much. But if some of these cruising areas were previous public spaces that were not even incorporated into the guides in previous years, it does speak to the rapid expansion and appropriation of said public spaces by gay men. An educated guess could be that, with the increase in risk in locales that were previously regarded as safe, gay men sought alternative spatial practices to resist to the normative city and, consciously or not, expanding the queer cultural landscape of NYC.
+
+The graphs above left me to wonder where those locations were. With the uncertain addresses removed from the risky locations data frames, there is no way to effectively search for those places today. However, looking at exploratory graphs prompted me to go back to the geocoded complete data and ask new questions: where in the city were each of those categories mainly located? Were there clusters of, for instance, cruising areas that could lead a hint to where unclear risky addresses were potentially located? How were those clusters spatially organized in the 1970s, and how were they spatially organized in the 1990s? Can we look for hints of how gay men shifted their spatial practices over the course of two decades in response to increased risk and state control? 
+
+The last step of my exploratory data analysis was to create two interactive maps to observe the spatial arrangement of gay locales in NYC in 1970 and 1995. The maps show the expansion of the Gay City beyond the island of Manhattan. They also hint on the clusters of spaces that gay men appropriated in both years: in 1970, the famous gay neighborhood of Greenwich Village emerges triumphant; in 1990, other clusters appear like the one in the Midtown East area. The outputs seem now overwhelmingly open to interpretation -- but the long road ahead of us indicates the exploration has just begun.
+
+```{r}
+library(RColorBrewer)
+
+gaynewyork <- read.csv("~/Risky-New-York/gay guides data/gaynewyork.csv")
+
+#In 1970:
 nyc.1970 <- gaynewyork %>% 
   filter(Year == 1970) %>% 
   filter(lat <= 41 & lon <= -73.75)
 
-state.newyork.map <- map_data('county', region = "new york") %>% 
-  filter(lat <= 41 & long <= -73.75)
-
-# Background 1: NASA
-m <- leaflet() %>% 
-   addTiles() %>% 
-   setView( lng = 2.34, lat = 48.85, zoom = 5 ) %>% 
-   addProviderTiles("NASAGIBS.ViirsEarthAtNight2012")
-
-ggplot() +
-  geom_map(data = state.newyork.map, map = state.newyork.map, aes(x = long, y = lat, map_id= region), fill = "pink", linewidth = 0.5, color="black") +
-  geom_point(data = nyc.1970, aes(x=lon, y=lat), size = 3, shape = 23, fill = ~catCol(nyc.1970$categories))
+pal <- colorFactor(pal = "Set2", domain = nyc.1970$categories)
 
   leaflet(data = nyc.1970) %>%
-    addTiles() %>%
-    addCircleMarkers(~lon, ~lat, color = pal(nyc.1970$categories), popup = paste("Location Name:", nyc.1970$title, ", ", "Type:", nyc.1970$categories)) %>% 
-    addLegend(position = "bottomleft", values = ~categories, pal = pal)
+    addProviderTiles("Esri.WorldGrayCanvas") %>%
+    addCircleMarkers(~lon, ~lat, color = ~pal(categories), popup = paste("Location Name:", nyc.1970$title, ", ", "Type:", nyc.1970$categories)) %>% 
+    addLegend(position = "topright", pal = pal, values = ~categories, title = "Gay Locations in 1970")
+  
+#In 1990:
+nyc.1990 <- gaynewyork %>% 
+  filter(Year == 1990) %>% 
+  filter(lat <= 41 & lon <= -73.75)
+
+pal2 <- colorFactor(pal = "Set2", domain = nyc.1990$categories)
+
+  leaflet(data = nyc.1990) %>%
+    addProviderTiles("Esri.WorldGrayCanvas") %>%
+    addCircleMarkers(~lon, ~lat, color = ~pal2(categories), popup = paste("Location Name:", nyc.1990$title, ", ", "Type:", nyc.1990$categories)) %>% 
+    addLegend(position = "topright", pal = pal2, values = ~categories, title = "Gay Locations in 1990")
 ```
-
-
-If the user filtered the map to show only locations that existed in the state of New York in 1980, for example, this is how it would look like:
-
-```{r}
-gayguides.complete <- read.csv("~/Risky-New-York/gay guides data/gayguides.complete.csv")
-
-gg.nyc.1980 <- gayguides.complete %>% 
-  filter(state == "NY" & Year == 1980)
-
-leaflet(data=gg.nyc.1980) %>% addTiles() %>% addMarkers(~lon, ~lat, popup = paste("Location Name:", gg.nyc.1980$title, ", ", "Type:", gg.nyc.1980$type))
-```
-
 
 ---
 [^1]: George Chauncey, <i> Gay New York: Gender, Urban Culture, and the Making of the Gay Male World </i> (New York: Basic Books, 1994), 5.

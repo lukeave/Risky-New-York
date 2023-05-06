@@ -162,9 +162,9 @@ gayguides.complete$categories <- ifelse(grepl('Religious', gayguides.complete$ty
                                                                                                                                                                       ifelse(grepl('Men', gayguides.complete$type), "Organizations",
                                                                                                                                                                              ifelse(grepl('Organization', gayguides.complete$type), "Organizations",
                                                                                                                                                                                     ifelse(grepl('Cruis', gayguides.complete$type), "Cruising Areas", "NA")))))))))))))))))))))))
-#count new categories
+#count new categories per year
 categories.count <- gayguides.complete %>% 
-  group_by(categories) %>% 
+  group_by(categories, Year) %>% 
   summarize(count = n())
 
 write.csv(categories.count, file = "~/Risky-New-York/gay guides data/categories.count.csv")
@@ -190,6 +190,8 @@ gayguides.complete <- gayguides.complete %>%
 gaynewyork <- gayguides.complete %>% 
   filter(state == "NY")
 
+write.csv(gaynewyork, file = "~/Risky-New-York/gay guides data/gaynewyork.csv")
+
 #get NY counties
 state.newyork.map <- map_data('county', region = "new york")
 
@@ -203,10 +205,10 @@ ggplot() +
 
 #count unique NY analytic categories (new collapsed types)
 ny.categories.count <- gaynewyork %>% 
-  group_by(categories) %>% 
+  group_by(categories, Year) %>% 
   summarize(count = n())
 
-write.csv(ny.categories.count, file = "~/Risky-New-York/gay guides data/ny.categories.count")
+write.csv(ny.categories.count, file = "~/Risky-New-York/gay guides data/ny.categories.count.csv")
 
 #subset gaynewyork to visualize the different categorizations of the Ramrod Bar over time
 ramrod.vis <- gaynewyork %>% 
