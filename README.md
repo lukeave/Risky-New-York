@@ -1,5 +1,5 @@
 
-This project is a preliminary exploratory analysis of the Mapping the Gay Guides data.
+This project is a preliminary exploratory analysis of the <a href="https://github.com/MappingtheGayGuides/MGG-Data.git">Mapping the Gay Guides</a> Mapping the Gay Guides data.
 
 The Gay New York City in the second half of the twentieth century was a stubborn response to the risks of Normative New York - the heteronormative cultural topography and sexual regime established during and after the Second World War. In the public sphere, particular locales became associated with gay culture and resistance to status quo by being categorized as dangerous and risky for gay men. In this short reflection, I use methodologies of data exploratory analysis to examine the available data from the Mapping the Gay Guides project and visualize potential correlation between the suppressed gay landscape in New York City and appropriation of “risky” public spaces of the normative city by gay men.
 
