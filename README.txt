@@ -4,6 +4,7 @@ The Gay New York City in the second half of the twentieth century was a stubborn
 
 "Risky New York" uses the avialable data from the Mapping the Gay Guides project between 1965 and 1996. It also draws from schoalrship on gender and space, primarily "Gay New York" by George Chauncey, "Women and The City: Gender, Space, and Power in Boston, 1870, 1940" by Sarah Deutsch, and "Buy Gay: How Physique Entrepreneurs Sparked a Movement" by David K. Johnson. The project looks primarily at how gay men appropriated public spaces in the city of New York between the 1960s and the 1990s resulting in distinct spatial practices that resisted to gendered dynamics of power and the normative American urban and cultural landscape. 
 
+
 Chauncey, George. <i>Gay New York: Gender, Urban Culture, and the Making of the Gay Male World.</i> New York: Basic Books, 1994.
 
 D'Emilio, John and Estelle B. Freedman. <i>Intimate Matters: A History of Sexuality in America.</i> Chicago: Chicago University Press, 1988.
