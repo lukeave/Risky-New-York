@@ -4,6 +4,7 @@ author: "Lucas Avelar"
 date: "April 29, 2023"
 output: html_document
 ---
+
 ```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
 
