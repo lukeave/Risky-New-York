@@ -91,7 +91,8 @@ ramrod.vis <- ramrod.vis %>%
   group_by(Year)
 
 ramrod.vis %>%
-  arrange(Year)
+  arrange(Year) %>% 
+  knitr::kable(format = "markdown")
 ```
 
 <h3> Appropriating Risky New York <h3/>
