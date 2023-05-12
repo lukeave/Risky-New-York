@@ -26,7 +26,7 @@ The study of historically marginalized groups and their presence in, movement th
 
 Early-twentieth-century gay men did not passively internalize and accept the dominant cultural perspective on their sexuality and identities, nor were they invisible figures in thriving urban landscapes like New York, Minneapolis, and Boston. The shift started in the 1930s and it was all but immediate. New waves of anti-gay policing and legislation forced gay people to gradually hide their complex social network from the eyes of outsiders. Arrest numbers of gay men in New York City during the 1930s for engaging with gay life in the public sphere skyrocketed. Gradually yet violently, the gay city was suppressed back into the shadows of the normative city. But as Chauncey insists, despite the forceful discretion and increased state censorship and control over homosexual life over the 1940s and 1950s, the gay world "continued to thrive and became even more extensive."[^2] 
 
-The Gay New York City in the second half of the twentieth century was a stubborn response to the risks of Normative New York - the heteronormative cultural topography and sexual regime established during and after the Second World War. In the public sphere, particular locales became associated with gay culture and resistance to <i>status quo</i> by being categorized as dangerous and risky for gay men. In this short reflection, I use methodologies of data exploratory analysis to examine the available data from the <i>Mapping the Gay Guides</i> project and visualize potential correlation between the suppressed gay landscape in New York City and appropriation of "risky" public spaces of the normative city by gay men.
+The Gay New York City in the second half of the twentieth century was a stubborn response to the risks of Normative New York - the heteronormative cultural topography and sexual regime established during and after the Second World War. In the public sphere, particular locales became associated with gay culture and resistance to <i>status quo</i> by being categorized as dangerous and risky for gay men. In this short reflection, I use methodologies of data exploratory analysis to examine the available data from the <i>Mapping the Gay Guides</i> project and visualize potential correlation between the suppressed gay landscape in New York City and appropriation of "risky" public spaces of the normative city by gay men.[^9]
 
 <h3> A Shared Sense of Place </h3>
 
@@ -95,7 +95,7 @@ ramrod.vis %>%
 
 <h3> Appropriating Risky New York <h3/>
 
-Although risky locations are commonly associated with cruising areas, Risky New York was everywhere: restaurants, bars, hotels, and even culture-oriented businesses like theaters were included in the landscape of violence against gay men and the queer community. To better assess the types of locations that were somehow assigned a risk factor in Damron's Books, I did an exploratory analysis of the Gay Guides data following some of the steps proposed by Roger D. Peng. [^10]
+Although risky locations are commonly associated with cruising areas, Risky New York was everywhere: restaurants, bars, hotels, and even culture-oriented businesses like theaters were included in the landscape of violence against gay men and the queer community. To better assess the types of locations that were somehow assigned a risk factor in Damron's Books, I did an exploratory analysis of the Gay Guides data following some of the steps proposed by Roger D. Peng.[^10]
 
 <h4> Step 1: Formulate the question </h4>
 
@@ -210,11 +210,11 @@ pal2 <- colorFactor(pal = "Set2", domain = nyc.1990$categories)
 ---
 [^1]: George Chauncey, <i> Gay New York: Gender, Urban Culture, and the Making of the Gay Male World </i> (New York: Basic Books, 1994), 5.
 [^2]: George Chauncey, <i> Gay New York</i>, 9.
+[^9]: Mapping the Gay Guides, Amanda Regan and Eric Gonzaba, (2019-): http://www.mappingthegayguides.org.
 [^3]: Judith Walkowitz, <i> Prostitution and Victorian Society: Women ,Class, and the State</i> (Cambridge: Cambridge University Press, 1980); Jonh D'Emilio, <i> Sexual Politics, Sexual Communities: The Making of a Homosexual Minority in the United States, 1940-1970</i> (Chicago: University of Chicago Press, 1983); Estelle B. Freedman, "Sexuality in Nineteenth-Century America: Behavior, Ideology and Politics," <i> Reviews in American History</i> 10 (December 1982): 196-215; Linda Gordon, <i> Woman's Body, Woman's Right: A Social History of Birth Control in America</i> (New York: Grossman, 1976).
 [^4]: John D'Emilio and Estelle B. Freedman, <i>Intimate Matters: A History of Sexuality in America</i> (Chicago: Chicago University Press, 1988), 57-59.
 [^5]: John Brinckerhoff Jackson has discussed how our sense of place is intimately connected to our sense of shared time. Here, I use the notions of sense of place and sense of time to suggest that the thriving gay city (or, the gay world of appropriated places) was built on shared rituals and, as per Jackson, a shared "timetable:" Because gay men ritually returned to those same spaces in the city, they established a sense of place in those locations that solidified their belonging to a larger gay community and culture. See: John Brinckerhoff Jackson, <i>A Sense of Place, A Sense of Time</i> (Yale University Press, 1994), 157-160.
 [^6]: David K. Johnson, <i> Buying Gay: How Physique Entrepreneurs Sparked a Movement</i> (New York: Columbia University Press, 2019), 193.
 [^7]: Thomas L. Long, <i>AIDS and American apocalypticism: the cultural semiotics of an epidemic</i> (Albany: State University of New York Press, 2005), 108-109.
 [^8]: For a recent example, see Larry Knopp and Michael Brown, "Travel Guides, Urban Spatial Imaginaries and LGBTQ+ activism: The case of Damron Guides," <i>Urban Studies</i> (February 2020): 1-17.
-[^9] Mapping the Gay Guides, Amanda Regan and Eric Gonzaba, (2019-): http://www.mappingthegayguides.org.
 [^10]: Roger D. Peng, <i>Exploratory Data Analysis with R<i/> (Lulu, 2016): https://bookdown.org/rdpeng/exdata/
