@@ -10,7 +10,6 @@ knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
 
 library(ggplot2) 
 library(tidyverse)
-library(DigitalMethodsData)
 library(ggmap)
 library(tidygeocoder)
 library(tidyr)
@@ -156,8 +155,6 @@ ggplot(ny.categories.count, aes(fill=categories, y=count, x=Year)) +
 Now, which of these locations were assigned a risk factor?
 
 ```{r}
-library(streamgraph)
-
 risky.newyork <- read.csv("~/Risky-New-York/gay guides data/risky.newyork.csv")
 
 df <- risky.newyork %>% 
