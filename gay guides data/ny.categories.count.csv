@@ -25,197 +25,198 @@
 "24","Accommodations",1989,20
 "25","Accommodations",1990,6
 "26","Accommodations",1991,7
-"27","Accommodations",1993,9
-"28","Accommodations",1994,15
-"29","Accommodations",1995,15
-"30","Accommodations",1996,27
-"31","Bars",1965,39
-"32","Bars",1966,45
-"33","Bars",1968,51
-"34","Bars",1969,74
-"35","Bars",1970,88
-"36","Bars",1971,97
-"37","Bars",1972,112
-"38","Bars",1973,121
-"39","Bars",1974,147
-"40","Bars",1975,151
-"41","Bars",1976,123
-"42","Bars",1977,193
-"43","Bars",1978,178
-"44","Bars",1979,191
-"45","Bars",1980,186
-"46","Bars",1981,192
-"47","Bars",1982,187
-"48","Bars",1983,200
-"49","Bars",1984,174
-"50","Bars",1985,174
-"51","Bars",1986,169
-"52","Bars",1987,156
-"53","Bars",1988,159
-"54","Bars",1989,154
-"55","Bars",1990,107
-"56","Bars",1991,121
-"57","Bars",1992,113
-"58","Bars",1993,105
-"59","Bars",1994,115
-"60","Bars",1995,110
-"61","Bars",1996,101
-"62","Bath Houses",1965,2
-"63","Bath Houses",1966,4
-"64","Bath Houses",1968,5
-"65","Bath Houses",1969,5
-"66","Bath Houses",1970,8
-"67","Bath Houses",1971,6
-"68","Bath Houses",1972,8
-"69","Bath Houses",1973,7
-"70","Bath Houses",1974,9
-"71","Bath Houses",1975,13
-"72","Bath Houses",1976,11
-"73","Bath Houses",1977,13
-"74","Bath Houses",1978,11
-"75","Bath Houses",1979,16
-"76","Bath Houses",1980,19
-"77","Bath Houses",1981,19
-"78","Bath Houses",1982,16
-"79","Bath Houses",1983,21
-"80","Bath Houses",1984,15
-"81","Bath Houses",1985,11
-"82","Bath Houses",1986,13
-"83","Bath Houses",1987,11
-"84","Bath Houses",1988,7
-"85","Bath Houses",1989,5
-"86","Businesses",1970,1
-"87","Businesses",1971,1
-"88","Businesses",1972,2
-"89","Businesses",1973,8
-"90","Businesses",1974,8
-"91","Businesses",1975,13
-"92","Businesses",1976,15
-"93","Businesses",1977,28
-"94","Businesses",1978,29
-"95","Businesses",1979,48
-"96","Businesses",1980,43
-"97","Businesses",1981,47
-"98","Businesses",1982,46
-"99","Businesses",1983,50
-"100","Businesses",1984,48
-"101","Businesses",1985,52
-"102","Businesses",1986,46
-"103","Businesses",1987,50
-"104","Businesses",1988,56
-"105","Businesses",1989,46
-"106","Businesses",1990,58
-"107","Businesses",1991,62
-"108","Businesses",1992,65
-"109","Businesses",1993,62
-"110","Businesses",1994,61
-"111","Businesses",1995,63
-"112","Businesses",1996,56
-"113","Cruising Areas",1972,14
-"114","Cruising Areas",1973,23
-"115","Cruising Areas",1974,30
-"116","Cruising Areas",1975,38
-"117","Cruising Areas",1976,29
-"118","Cruising Areas",1977,47
-"119","Cruising Areas",1978,47
-"120","Cruising Areas",1979,53
-"121","Cruising Areas",1980,58
-"122","Cruising Areas",1981,65
-"123","Cruising Areas",1982,69
-"124","Cruising Areas",1983,70
-"125","Cruising Areas",1984,65
-"126","Cruising Areas",1985,71
-"127","Cruising Areas",1986,73
-"128","Cruising Areas",1987,94
-"129","Cruising Areas",1988,101
-"130","Cruising Areas",1989,78
-"131","Gyms",1981,2
-"132","Gyms",1982,1
-"133","Gyms",1983,3
-"134","Gyms",1984,2
-"135","Gyms",1985,2
-"136","Gyms",1986,2
-"137","Gyms",1987,2
-"138","Gyms",1988,1
-"139","Gyms",1989,2
-"140","Gyms",1990,6
-"141","Gyms",1991,5
-"142","Gyms",1992,4
-"143","Gyms",1993,6
-"144","Gyms",1994,2
-"145","Gyms",1995,4
-"146","Gyms",1996,4
-"147","Organizations",1976,1
-"148","Organizations",1977,1
-"149","Organizations",1978,3
-"150","Organizations",1979,3
-"151","Organizations",1980,2
-"152","Organizations",1981,1
-"153","Organizations",1982,1
-"154","Organizations",1983,8
-"155","Organizations",1984,11
-"156","Organizations",1985,12
-"157","Organizations",1986,9
-"158","Organizations",1987,12
-"159","Organizations",1988,12
-"160","Organizations",1989,12
-"161","Organizations",1990,3
-"162","Organizations",1991,3
-"163","Organizations",1992,4
-"164","Organizations",1993,5
-"165","Organizations",1994,15
-"166","Organizations",1995,12
-"167","Organizations",1996,11
-"168","Religious Institutions",1972,1
-"169","Religious Institutions",1973,2
-"170","Religious Institutions",1974,2
-"171","Religious Institutions",1975,2
-"172","Religious Institutions",1976,2
-"173","Religious Institutions",1977,1
-"174","Religious Institutions",1978,1
-"175","Religious Institutions",1979,2
-"176","Religious Institutions",1980,3
-"177","Religious Institutions",1981,3
-"178","Religious Institutions",1982,3
-"179","Religious Institutions",1983,7
-"180","Religious Institutions",1984,6
-"181","Religious Institutions",1985,8
-"182","Religious Institutions",1986,4
-"183","Religious Institutions",1987,8
-"184","Religious Institutions",1988,10
-"185","Religious Institutions",1989,10
-"186","Religious Institutions",1990,11
-"187","Religious Institutions",1991,10
-"188","Religious Institutions",1992,11
-"189","Religious Institutions",1993,6
-"190","Restaurants",1965,6
-"191","Restaurants",1966,6
-"192","Restaurants",1968,9
-"193","Restaurants",1969,18
-"194","Restaurants",1970,24
-"195","Restaurants",1971,25
-"196","Restaurants",1972,27
-"197","Restaurants",1973,40
-"198","Restaurants",1974,60
-"199","Restaurants",1975,57
-"200","Restaurants",1976,44
-"201","Restaurants",1977,58
-"202","Restaurants",1978,50
-"203","Restaurants",1979,65
-"204","Restaurants",1980,68
-"205","Restaurants",1981,66
-"206","Restaurants",1982,69
-"207","Restaurants",1983,54
-"208","Restaurants",1984,49
-"209","Restaurants",1985,37
-"210","Restaurants",1986,35
-"211","Restaurants",1987,56
-"212","Restaurants",1988,60
-"213","Restaurants",1989,47
-"214","Restaurants",1990,18
-"215","Restaurants",1991,19
-"216","Restaurants",1992,17
-"217","Restaurants",1993,14
-"218","Restaurants",1994,20
-"219","Restaurants",1995,23
-"220","Restaurants",1996,29
+"27","Accommodations",1992,9
+"28","Accommodations",1993,9
+"29","Accommodations",1994,15
+"30","Accommodations",1995,15
+"31","Accommodations",1996,27
+"32","Bars",1965,39
+"33","Bars",1966,45
+"34","Bars",1968,51
+"35","Bars",1969,74
+"36","Bars",1970,88
+"37","Bars",1971,97
+"38","Bars",1972,112
+"39","Bars",1973,121
+"40","Bars",1974,147
+"41","Bars",1975,151
+"42","Bars",1976,123
+"43","Bars",1977,193
+"44","Bars",1978,178
+"45","Bars",1979,191
+"46","Bars",1980,186
+"47","Bars",1981,192
+"48","Bars",1982,187
+"49","Bars",1983,200
+"50","Bars",1984,174
+"51","Bars",1985,174
+"52","Bars",1986,169
+"53","Bars",1987,156
+"54","Bars",1988,159
+"55","Bars",1989,154
+"56","Bars",1990,107
+"57","Bars",1991,121
+"58","Bars",1992,113
+"59","Bars",1993,105
+"60","Bars",1994,115
+"61","Bars",1995,110
+"62","Bars",1996,101
+"63","Bath Houses",1965,2
+"64","Bath Houses",1966,4
+"65","Bath Houses",1968,5
+"66","Bath Houses",1969,5
+"67","Bath Houses",1970,8
+"68","Bath Houses",1971,6
+"69","Bath Houses",1972,8
+"70","Bath Houses",1973,7
+"71","Bath Houses",1974,9
+"72","Bath Houses",1975,13
+"73","Bath Houses",1976,11
+"74","Bath Houses",1977,13
+"75","Bath Houses",1978,11
+"76","Bath Houses",1979,16
+"77","Bath Houses",1980,19
+"78","Bath Houses",1981,19
+"79","Bath Houses",1982,16
+"80","Bath Houses",1983,21
+"81","Bath Houses",1984,15
+"82","Bath Houses",1985,11
+"83","Bath Houses",1986,13
+"84","Bath Houses",1987,11
+"85","Bath Houses",1988,7
+"86","Bath Houses",1989,5
+"87","Businesses",1970,1
+"88","Businesses",1971,1
+"89","Businesses",1972,2
+"90","Businesses",1973,8
+"91","Businesses",1974,8
+"92","Businesses",1975,13
+"93","Businesses",1976,15
+"94","Businesses",1977,28
+"95","Businesses",1978,29
+"96","Businesses",1979,48
+"97","Businesses",1980,43
+"98","Businesses",1981,47
+"99","Businesses",1982,46
+"100","Businesses",1983,50
+"101","Businesses",1984,48
+"102","Businesses",1985,52
+"103","Businesses",1986,46
+"104","Businesses",1987,50
+"105","Businesses",1988,56
+"106","Businesses",1989,46
+"107","Businesses",1990,58
+"108","Businesses",1991,62
+"109","Businesses",1992,65
+"110","Businesses",1993,62
+"111","Businesses",1994,61
+"112","Businesses",1995,63
+"113","Businesses",1996,56
+"114","Cruising Areas",1972,14
+"115","Cruising Areas",1973,23
+"116","Cruising Areas",1974,30
+"117","Cruising Areas",1975,38
+"118","Cruising Areas",1976,29
+"119","Cruising Areas",1977,47
+"120","Cruising Areas",1978,47
+"121","Cruising Areas",1979,53
+"122","Cruising Areas",1980,58
+"123","Cruising Areas",1981,65
+"124","Cruising Areas",1982,69
+"125","Cruising Areas",1983,70
+"126","Cruising Areas",1984,65
+"127","Cruising Areas",1985,71
+"128","Cruising Areas",1986,73
+"129","Cruising Areas",1987,94
+"130","Cruising Areas",1988,101
+"131","Cruising Areas",1989,78
+"132","Gyms",1981,2
+"133","Gyms",1982,1
+"134","Gyms",1983,3
+"135","Gyms",1984,2
+"136","Gyms",1985,2
+"137","Gyms",1986,2
+"138","Gyms",1987,2
+"139","Gyms",1988,1
+"140","Gyms",1989,2
+"141","Gyms",1990,6
+"142","Gyms",1991,5
+"143","Gyms",1992,4
+"144","Gyms",1993,6
+"145","Gyms",1994,2
+"146","Gyms",1995,4
+"147","Gyms",1996,4
+"148","Organizations",1976,1
+"149","Organizations",1977,1
+"150","Organizations",1978,3
+"151","Organizations",1979,3
+"152","Organizations",1980,2
+"153","Organizations",1981,1
+"154","Organizations",1982,1
+"155","Organizations",1983,8
+"156","Organizations",1984,11
+"157","Organizations",1985,12
+"158","Organizations",1986,9
+"159","Organizations",1987,12
+"160","Organizations",1988,12
+"161","Organizations",1989,12
+"162","Organizations",1990,3
+"163","Organizations",1991,3
+"164","Organizations",1992,4
+"165","Organizations",1993,5
+"166","Organizations",1994,15
+"167","Organizations",1995,12
+"168","Organizations",1996,11
+"169","Religious Institutions",1972,1
+"170","Religious Institutions",1973,2
+"171","Religious Institutions",1974,2
+"172","Religious Institutions",1975,2
+"173","Religious Institutions",1976,2
+"174","Religious Institutions",1977,1
+"175","Religious Institutions",1978,1
+"176","Religious Institutions",1979,2
+"177","Religious Institutions",1980,3
+"178","Religious Institutions",1981,3
+"179","Religious Institutions",1982,3
+"180","Religious Institutions",1983,7
+"181","Religious Institutions",1984,6
+"182","Religious Institutions",1985,8
+"183","Religious Institutions",1986,4
+"184","Religious Institutions",1987,8
+"185","Religious Institutions",1988,10
+"186","Religious Institutions",1989,10
+"187","Religious Institutions",1990,11
+"188","Religious Institutions",1991,10
+"189","Religious Institutions",1992,11
+"190","Religious Institutions",1993,6
+"191","Restaurants",1965,6
+"192","Restaurants",1966,6
+"193","Restaurants",1968,9
+"194","Restaurants",1969,18
+"195","Restaurants",1970,24
+"196","Restaurants",1971,25
+"197","Restaurants",1972,27
+"198","Restaurants",1973,40
+"199","Restaurants",1974,60
+"200","Restaurants",1975,57
+"201","Restaurants",1976,44
+"202","Restaurants",1977,58
+"203","Restaurants",1978,50
+"204","Restaurants",1979,65
+"205","Restaurants",1980,68
+"206","Restaurants",1981,66
+"207","Restaurants",1982,69
+"208","Restaurants",1983,54
+"209","Restaurants",1984,49
+"210","Restaurants",1985,37
+"211","Restaurants",1986,35
+"212","Restaurants",1987,56
+"213","Restaurants",1988,60
+"214","Restaurants",1989,47
+"215","Restaurants",1990,18
+"216","Restaurants",1991,19
+"217","Restaurants",1992,17
+"218","Restaurants",1993,14
+"219","Restaurants",1994,20
+"220","Restaurants",1995,23
+"221","Restaurants",1996,29
